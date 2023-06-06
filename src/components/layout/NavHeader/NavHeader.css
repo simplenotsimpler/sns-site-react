@@ -38,6 +38,10 @@
   margin-left: auto;
 }
 
+.active {
+  color: var(--color-primary);
+}
 .navMenuLink {
   text-decoration: none;
+  color: inherit;
 }
