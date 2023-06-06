@@ -27,14 +27,16 @@ function CustomLink({ to, children, ...props }) {
   );
 }
 
-//TODO: make the brand link to /
 //TODO: smooth scrolling
 //TODO: mobile menu
 const NavHeader = () => {
   return (
     <div className="navHeader">
       <nav className="navBar">
-        <h1 className="brandName">Simple Not Simpler</h1>
+        <HashLink to="#top" className="brandName">
+          Simple Not Simpler
+        </HashLink>
+
         <ul className="navMenu">
           <CustomLink to="#about" className="navMenuLink">
             About
