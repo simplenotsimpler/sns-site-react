@@ -1,3 +1,6 @@
+/* TODO: font style roboto */
+/* TODO: add breakpoint notes */
+
 :root {
   --color-primary: #e2007a;
   --color-dark: #080908;
@@ -30,13 +33,15 @@ ul {
 ul {
   list-style: none;
 }
+/* 
+.container {
 
-nav {
-  background-color: aquamarine;
-}
+
+} */
 
 .section-style {
   height: 600px;
   background-color: aqua;
   margin-bottom: 5rem;
+  scroll-margin: 6rem;
 }
