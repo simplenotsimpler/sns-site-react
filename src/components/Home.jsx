@@ -1,9 +1,10 @@
-import React from "react";
 import NavHeader from "./layout/NavHeader/NavHeader.jsx";
+import ScrollToHashElement from "./layout/ScrollToHashElement.js";
 
 const Home = () => {
   return (
     <>
+      <ScrollToHashElement />
       <NavHeader />
       <main className="container">
         <section id="about" className="section-style">

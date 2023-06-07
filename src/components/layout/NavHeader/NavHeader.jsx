@@ -1,11 +1,11 @@
-import { HashLink } from "react-router-hash-link";
+import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 
 import "./NavHeader.css";
 
 /* 
   Issue: NavHashLink does not apply active styling anymore and this issue returned https://github.com/rafgraph/react-router-hash-link/issues/29. 
-  (I think had similar issues w/ React Router Dom NavLink.)
+  I think had similar issues w/ React Router Dom NavLink so I have kept this solution even with the switch to ScrollToHashElement.
   
   SOLUTION: combined the following to detect active link w/ hash:
   https://github.com/WebDevSimplified/react-navbar/blob/main/src/Navbar.js
@@ -13,6 +13,8 @@ import "./NavHeader.css";
   make sure anchor class after li class since inheriting color from above
   https://medium.com/how-to-react/add-an-active-classname-to-the-link-using-react-router-b7c350473916
   --> except used location.hash
+
+  Note: switched 
 */
 
 function CustomLink({ to, children, ...props }) {
@@ -20,9 +22,9 @@ function CustomLink({ to, children, ...props }) {
 
   return (
     <li className={location.hash === to ? "active" : ""}>
-      <HashLink to={to} {...props}>
+      <Link to={to} {...props}>
         {children}
-      </HashLink>
+      </Link>
     </li>
   );
 }
@@ -33,9 +35,9 @@ const NavHeader = () => {
   return (
     <div className="navHeader">
       <nav className="navBar">
-        <HashLink to="#top" className="brandName">
+        <Link to="#top" className="brandName">
           Simple Not Simpler
-        </HashLink>
+        </Link>
 
         <ul className="navMenu">
           <CustomLink to="#about" className="navMenuLink">
