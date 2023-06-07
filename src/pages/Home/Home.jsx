@@ -1,5 +1,5 @@
-import NavHeader from "../layout/NavHeader/NavHeader.jsx";
-import ScrollToHashElement from "../layout/ScrollToHashElement.js";
+import NavHeader from "../../components/layout/NavHeader/NavHeader.jsx";
+import ScrollToHashElement from "../../components/layout/ScrollToHashElement.js";
 
 import "./Home.css";
 
