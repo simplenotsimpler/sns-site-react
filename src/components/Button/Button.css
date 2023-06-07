@@ -1,0 +1,31 @@
+.btn {
+  background-color: var(--color-primary);
+  color: white;
+  cursor: pointer;
+  border: none;
+  border-radius: 30px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 28px;
+
+  padding: 34px 13px;
+}
+
+.btnLarge {
+  width: 284px;
+  height: 60px;
+  /* 34 horizontal 
+  13-15 vertical
+  let's connect*/
+}
+
+.btnSmall {
+  width: 172px;
+  height: 60px;
+
+  /* 42 horizontal
+  13-15 vertical */
+}
