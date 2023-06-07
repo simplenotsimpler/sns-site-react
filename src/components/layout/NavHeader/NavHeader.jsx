@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
+import { useState } from "react";
 
 import "./NavHeader.css";
 
@@ -32,6 +33,12 @@ function CustomLink({ to, children, ...props }) {
 //TODO: smooth scrolling
 //TODO: mobile menu
 const NavHeader = () => {
+  const [isNavExpanded, setIsNavExpanded] = useState(false);
+
+  const handleNavToggle = (e) => {
+    setIsNavExpanded(!isNavExpanded);
+  };
+
   return (
     <div className="navHeader">
       <nav className="navBar">
@@ -39,20 +46,47 @@ const NavHeader = () => {
           Simple Not Simpler
         </Link>
 
-        <ul className="navMenu">
-          <CustomLink to="#about" className="navMenuLink">
+        <ul
+          className={`navMenu ${isNavExpanded ? "expanded" : ""}`}
+          onClick={handleNavToggle}
+        >
+          <CustomLink
+            to="#about"
+            className="navMenuLink"
+            onClick={handleNavToggle}
+          >
             About
           </CustomLink>
-          <CustomLink to="#portfolio" className="navMenuLink">
+          <CustomLink
+            to="#portfolio"
+            className="navMenuLink"
+            onClick={handleNavToggle}
+          >
             Portfolio
           </CustomLink>
-          <CustomLink to="#skills" className="navMenuLink">
+          <CustomLink
+            to="#skills"
+            className="navMenuLink"
+            onClick={handleNavToggle}
+          >
             Skills
           </CustomLink>
-          <CustomLink to="#contact" className="navMenuLink">
+          <CustomLink
+            to="#contact"
+            className="navMenuLink"
+            onClick={handleNavToggle}
+          >
             Contact
           </CustomLink>
         </ul>
+        <div
+          className={`hamburger ${isNavExpanded ? "expanded" : ""}`}
+          onClick={handleNavToggle}
+        >
+          <span className="hamburgerBar"></span>
+          <span className="hamburgerBar"></span>
+          <span className="hamburgerBar"></span>
+        </div>
       </nav>
     </div>
   );

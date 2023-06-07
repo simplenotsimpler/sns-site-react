@@ -1,6 +1,6 @@
 .navHeader {
   width: 100%;
-  /* height: 120px; */
+  /* height accomodates MacBook Air camera location - per Figma prototype */
   height: 6rem;
   background-color: var(--color-light);
 
@@ -24,6 +24,7 @@
 
 .navBar {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   /* TODO: maybe make this whole content width via variable so can keep consistent? */
   width: 95%;
@@ -37,6 +38,7 @@
   text-transform: uppercase;
   font-size: 28px;
   margin-left: auto;
+  color: var(--color-dark);
 }
 
 .active {
@@ -45,4 +47,59 @@
 .navMenuLink {
   text-decoration: none;
   color: inherit;
+}
+
+.hamburger {
+  display: none;
+  z-index: 99999;
+}
+
+.hamburgerBar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--color-dark);
+}
+
+@media only screen and (max-width: 972px) {
+  .navMenu {
+    position: fixed;
+    left: -100%;
+    top: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+
+    background-color: var(--color-light);
+    height: 100vh;
+    width: 100%;
+
+    transition: 0.3s;
+  }
+
+  .navMenu.expanded {
+    left: 0;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    color: var(--color-dark);
+  }
+
+  .hamburger.expanded .hamburgerBar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.expanded .hamburgerBar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.expanded .hamburgerBar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
 }

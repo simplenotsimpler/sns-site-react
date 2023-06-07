@@ -1,6 +1,20 @@
 /* TODO: font style roboto */
 /* TODO: add breakpoint notes */
 
+/* BREAKPOINTS - unfortunately, can't use CSS properties/variables in media queries yet.
+  
+  Using Tailwind breakpoints: https://tailwindcss.com/docs/responsive-design
+
+  Phone:
+    Small - 640px
+  Tablet:
+    Medium - 768px
+    Large - 1024px
+  Desktop/laptop (MacBook Air and larger)
+    X-Large - 1280px
+
+*/
+
 :root {
   --color-primary: #e2007a;
   --color-dark: #080908;
