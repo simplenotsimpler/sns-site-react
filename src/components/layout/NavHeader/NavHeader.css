@@ -27,7 +27,7 @@
   justify-content: space-between;
   align-items: center;
   /* TODO: maybe make this whole content width via variable so can keep consistent? */
-  width: 95%;
+  width: var(--width-standard);
   margin: 0 auto;
   height: inherit;
 }

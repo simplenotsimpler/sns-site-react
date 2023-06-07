@@ -1,5 +1,7 @@
-import NavHeader from "./layout/NavHeader/NavHeader.jsx";
-import ScrollToHashElement from "./layout/ScrollToHashElement.js";
+import NavHeader from "../layout/NavHeader/NavHeader.jsx";
+import ScrollToHashElement from "../layout/ScrollToHashElement.js";
+
+import "./Home.css";
 
 const Home = () => {
   return (

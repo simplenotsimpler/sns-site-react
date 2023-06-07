@@ -1,3 +1,5 @@
+/* TOP LEVEL STYLING ONLY */
+
 /* TODO: font style roboto */
 /* TODO: add breakpoint notes */
 
@@ -19,6 +21,8 @@
   --color-primary: #e2007a;
   --color-dark: #080908;
   --color-light: #ffffff;
+
+  --width-standard: 95%;
 }
 
 * {
@@ -46,16 +50,4 @@ ul {
 
 ul {
   list-style: none;
-}
-/* 
-.container {
-
-
-} */
-
-.section-style {
-  height: 600px;
-  background-color: aqua;
-  margin-bottom: 5rem;
-  scroll-margin: 6rem;
 }

@@ -1,0 +1,11 @@
+.container {
+  width: var(--width-standard);
+  margin: 0 auto;
+}
+
+.section-style {
+  height: 600px;
+  background-color: aqua;
+  margin-bottom: 5rem;
+  scroll-margin: 6rem;
+}
