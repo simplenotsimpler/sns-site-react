@@ -5,8 +5,6 @@ import App from "./App";
 
 import { BrowserRouter } from "react-router-dom";
 
-//TODO: update package.json meta info
-
 /* 
     NOTE: switch to ScrollToHashElement since react-router-hash-link does not officially support React Router v6 (although I had gotten it to work).
     source: https://github.com/ncoughlin/scroll-to-hash-element 

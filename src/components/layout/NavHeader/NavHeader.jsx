@@ -30,8 +30,6 @@ function CustomLink({ to, children, ...props }) {
   );
 }
 
-//TODO: smooth scrolling
-//TODO: mobile menu
 const NavHeader = () => {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
 
