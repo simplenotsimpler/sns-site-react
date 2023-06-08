@@ -4,8 +4,11 @@
 }
 
 .section-style {
-  height: 600px;
-  background-color: aqua;
   margin-bottom: 5rem;
   scroll-margin: 6rem;
+}
+
+.holder-color {
+  height: 600px;
+  background-color: aqua;
 }

@@ -1,0 +1,86 @@
+/* TODO: may need to tweak borders so thicker?? */
+
+/* may not need media queries */
+.projects {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  /* might want this smaller max except on really large screens */
+  grid-template-columns: repeat(auto-fill, minmax(322px, 1fr));
+  grid-auto-rows: auto;
+  gap: 1.5rem;
+}
+
+.project {
+  color: var(--color-dark);
+  background-color: var(--color-light);
+  /* maybe can move height up to grid-template-rows  */
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: solid 1px var(--color-primary);
+}
+
+.projectImgHolder {
+  width: 100%;
+  max-width: 100%;
+  height: 270px;
+  background-size: cover;
+  background-position: center center;
+  border-bottom: solid 2px var(--color-primary);
+  margin-bottom: 2rem;
+}
+
+.projectBody {
+  flex-grow: 1;
+  display: flex;
+  align-items: space-between;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+}
+.projectTitle {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 117%;
+  width: 100%;
+  height: 60px;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.projectText {
+  flex-grow: 1;
+  font-size: 18px;
+  line-height: 167%;
+}
+
+.projectFooter {
+  font-size: 20px;
+  line-height: 150%;
+  color: var(--color-primary);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 20px 20px 20px;
+
+  margin-top: auto;
+}
+
+.projectFooter a {
+  color: inherit;
+}
+
+.projectLink {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.projectIcon {
+  font-size: 1.75rem;
+}
