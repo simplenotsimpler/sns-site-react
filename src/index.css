@@ -20,7 +20,8 @@
   --color-light: #ffffff;
 
   /* check this, cards are ending up wider than anticipated on 1280 screen */
-  --width-standard: 95%;
+  --width-standard: 90%;
+  --width-column: 323px;
 }
 
 * {
@@ -80,6 +81,7 @@ ul {
   list-style: none;
 }
 
+/* TODO: might need separate container, etc. for bg since icon is actually 45px x 45px */
 .iconWithBackground {
   width: 60px;
   height: 60px;

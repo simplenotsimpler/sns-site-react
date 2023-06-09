@@ -1,16 +1,10 @@
 /* TODO: may need to tweak borders so thicker?? */
 
-/* TODO: set max width narrower than 1 fr*/
-/* TODO: may need a common width variable to share w/ skills */
-/* may not need media queries */
 .projects {
-  width: 100%;
-  height: 100%;
   display: grid;
   justify-content: center;
   align-items: center;
-  /* might want this smaller max except on really large screens */
-  grid-template-columns: repeat(auto-fill, minmax(322px, 1fr));
+  grid-template-columns: repeat(auto-fill, var(--width-column));
   grid-auto-rows: auto;
   gap: 1.5rem;
 }
@@ -18,13 +12,13 @@
 .project {
   color: var(--color-dark);
   background-color: var(--color-light);
-  /* maybe can move height up to grid-template-rows  */
   height: 600px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   border: solid 1px var(--color-primary);
+  min-width: var(--width-column);
 }
 
 .projectImgHolder {
@@ -85,4 +79,11 @@
 
 .projectIcon {
   font-size: 1.75rem;
+}
+
+/* this keeps it max 3 cols on larger screens & stays w/i margins with rest of screen sizes */
+@media only screen and (min-width: 1280px) {
+  .projects {
+    grid-template-columns: repeat(3, var(--width-column));
+  }
 }

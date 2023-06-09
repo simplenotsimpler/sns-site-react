@@ -16,7 +16,7 @@ const Home = () => {
         <section id="about" className="section-style holder-color">
           About
         </section>
-        <section id="portfolio" className="section-style">
+        <section id="portfolio" className="section-style ">
           <Projects />
         </section>
         <section id="skills" className="section-style">

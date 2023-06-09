@@ -1,12 +1,16 @@
 /* TODO: double-check how do responsiveness. maybe CSS Grid instead */
 .skills {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
 }
 
 .skillSection {
   text-align: center;
+  width: var(--width-column);
 }
 
 .iconWithBackground {
@@ -31,7 +35,6 @@
   flex-direction: column;
   align-items: space-between;
   justify-content: center;
-
   gap: 1.125rem;
 
   font-size: 28px;
