@@ -1,0 +1,40 @@
+/* TODO: double-check how do responsiveness. maybe CSS Grid instead */
+.skills {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skillSection {
+  text-align: center;
+}
+
+.iconWithBackground {
+  width: 60px;
+  height: 60px;
+  color: white;
+  background-color: var(--color-primary);
+  padding: 3px;
+}
+.skillTitle {
+  text-transform: capitalize;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 113%;
+  /* text-align: center; */
+  color: var(--color-primary);
+  margin-bottom: 1.125rem;
+}
+
+.keywords {
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  justify-content: center;
+
+  gap: 1.125rem;
+
+  font-size: 28px;
+  line-height: 113%;
+  color: var(--color-dark);
+}

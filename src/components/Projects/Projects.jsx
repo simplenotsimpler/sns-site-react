@@ -47,6 +47,7 @@ const Project = ({ project }) => {
   );
 };
 
+//TODO: pass projects as prop from Home page
 const Projects = () => {
   return (
     <ul className="projects">

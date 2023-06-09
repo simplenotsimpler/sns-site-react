@@ -79,3 +79,11 @@ ul {
 ul {
   list-style: none;
 }
+
+.iconWithBackground {
+  width: 60px;
+  height: 60px;
+  color: white;
+  background-color: var(--color-primary);
+  padding: 3px;
+}

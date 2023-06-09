@@ -1,4 +1,5 @@
 import Projects from "../../components/Projects/Projects.jsx";
+import Skills from "../../components/Skills/Skills.jsx";
 import NavHeader from "../../components/layout/NavHeader/NavHeader.jsx";
 import ScrollToHashElement from "../../components/layout/ScrollToHashElement.js";
 
@@ -18,8 +19,8 @@ const Home = () => {
         <section id="portfolio" className="section-style">
           <Projects />
         </section>
-        <section id="skills" className="section-style holder-color">
-          Skills
+        <section id="skills" className="section-style">
+          <Skills />
         </section>
         <section id="contact" className="section-style holder-color">
           Contact

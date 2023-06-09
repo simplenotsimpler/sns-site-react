@@ -1,5 +1,7 @@
 /* TODO: may need to tweak borders so thicker?? */
 
+/* TODO: set max width narrower than 1 fr*/
+/* TODO: may need a common width variable to share w/ skills */
 /* may not need media queries */
 .projects {
   width: 100%;
