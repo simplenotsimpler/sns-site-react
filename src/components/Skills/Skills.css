@@ -12,14 +12,6 @@
   width: var(--width-column);
 }
 
-/* TODO: move this & increase margin bottom */
-.iconWithBackground {
-  width: 60px;
-  height: 60px;
-  color: white;
-  background-color: var(--color-primary);
-  padding: 3px;
-}
 .skillTitle {
   text-transform: capitalize;
   font-weight: 700;
@@ -27,7 +19,7 @@
   line-height: 113%;
   /* text-align: center; */
   color: var(--color-primary);
-  margin-bottom: 1.125rem;
+  margin: 1.25rem 0;
 }
 
 .keywords {
