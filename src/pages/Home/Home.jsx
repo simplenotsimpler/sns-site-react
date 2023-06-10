@@ -1,3 +1,4 @@
+import Contact from "../../components/Contact/Contact.jsx";
 import Projects from "../../components/Projects/Projects.jsx";
 import Skills from "../../components/Skills/Skills.jsx";
 import NavHeader from "../../components/layout/NavHeader/NavHeader.jsx";
@@ -23,7 +24,7 @@ const Home = () => {
           <Skills />
         </section>
         <section id="contact" className="section-style holder-color">
-          Contact
+          <Contact />
         </section>
       </main>
     </>
