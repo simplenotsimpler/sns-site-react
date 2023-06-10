@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import "./Projects.css";
-import { projects } from "../../data/projectsData.js";
+
 import FaIcon from "../FaIcon/FaIcon.jsx";
 
 const Project = ({ project }) => {
@@ -49,8 +49,7 @@ const Project = ({ project }) => {
   );
 };
 
-//TODO: pass projects as prop from Home page
-const Projects = () => {
+const Projects = ({ projects }) => {
   return (
     <ul className="projects">
       {projects.map((project) => {

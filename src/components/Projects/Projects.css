@@ -10,7 +10,6 @@
 }
 
 .project {
-  color: var(--color-dark);
   background-color: var(--color-light);
   height: 600px;
   display: flex;

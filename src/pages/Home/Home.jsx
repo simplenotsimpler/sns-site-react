@@ -4,26 +4,30 @@ import Skills from "../../components/Skills/Skills.jsx";
 import NavHeader from "../../components/layout/NavHeader/NavHeader.jsx";
 import ScrollToHashElement from "../../components/layout/ScrollToHashElement.js";
 
+import { skills } from "../../data/skillsData.js";
+import { projects } from "../../data/projectsData.js";
+
 import "./Home.css";
 
-//TODO add section title as prop & style accordingly
-//TODO: rename classes here to not use hyphens (so friendly for CSS modules)
 const Home = () => {
   return (
     <>
       <ScrollToHashElement />
       <NavHeader />
       <main className="container">
-        <section id="about" className="section-style holder-color">
+        <section id="about" className="homeSection holderColor">
           About
         </section>
-        <section id="portfolio" className="section-style ">
-          <Projects />
+        <section id="portfolio" className="homeSection">
+          <h1 className="sectionTitle">Projects</h1>
+          <Projects projects={projects} />
         </section>
-        <section id="skills" className="section-style">
-          <Skills />
+        <section id="skills" className="homeSection">
+          <h1 className="sectionTitle">Skills</h1>
+          <Skills skills={skills} />
         </section>
-        <section id="contact" className="section-style">
+        <section id="contact" className="homeSection">
+          <h1 className="sectionTitle">Contact</h1>
           <Contact />
         </section>
       </main>

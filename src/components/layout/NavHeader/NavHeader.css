@@ -39,7 +39,6 @@
   text-transform: uppercase;
   font-size: 28px;
   margin-left: auto;
-  color: var(--color-dark);
 }
 
 .active {
@@ -89,7 +88,6 @@
   .hamburger {
     display: block;
     cursor: pointer;
-    color: var(--color-dark);
   }
 
   .hamburger.expanded .hamburgerBar:nth-child(2) {

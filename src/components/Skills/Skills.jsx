@@ -1,5 +1,5 @@
 import "./Skills.css";
-import { skills } from "../../data/skillsData.js";
+
 import FaIcon from "../FaIcon/FaIcon.jsx";
 
 const Keyword = ({ keyword }) => {
@@ -28,8 +28,8 @@ const Skill = ({ skill }) => {
   );
 };
 
-//TODO: pass skills as prop from Home page
-const Skills = () => {
+
+const Skills = ({skills}) => {
   return (
     <ul className="skills">
       {skills.map((skill) => {

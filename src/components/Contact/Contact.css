@@ -7,6 +7,7 @@
   height: 650px;
 }
 
+/* TODO: fix styling - spread out too much, doesn't look lined up anymore */
 .contactContent,
 .contactFormHolder {
   flex: 1 0 45%;
@@ -29,7 +30,7 @@
 .contactIntro {
   font-size: 1.625rem;
   line-height: 30px;
-  color: var(--color-dark);
+
   margin-bottom: 1rem;
   flex: 1;
 }
