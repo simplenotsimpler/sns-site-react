@@ -4,7 +4,7 @@ export const skills = [
   {
     id: "1",
     name: "responsive web design",
-    icon: "code",
+    icon: "Code",
     keywords: [
       "HTML / CSS",
       "JavaScript",
@@ -16,7 +16,7 @@ export const skills = [
   {
     id: "2",
     name: "office development",
-    icon: "folder",
+    icon: "Folder",
     keywords: [
       "Microsoft Access",
       "Microsoft Excel",
@@ -28,7 +28,7 @@ export const skills = [
   {
     id: "3",
     name: "data management",
-    icon: "database",
+    icon: "Database",
     keywords: ["SQL / NoSQL", "MongoDB", "Postgres", "REST APIs", "GraphQL"],
   },
 ];

@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
 import "./Projects.css";
-import { FaCodeBranch, FaGlobe } from "react-icons/fa";
 import { projects } from "../../data/projectsData.js";
+import FaIcon from "../FaIcon/FaIcon.jsx";
 
+//TODO: switch to using font awesome directly
 const Project = ({ project }) => {
   return (
     <li>
@@ -26,7 +27,8 @@ const Project = ({ project }) => {
             rel="noreferrer noopener"
             className="projectLink"
           >
-            <FaCodeBranch className="projectIcon" />
+            <FaIcon icon="CodeBranch" className="projectIcon" />
+
             <span>GitHub</span>
           </Link>
 
@@ -37,7 +39,8 @@ const Project = ({ project }) => {
               rel="noreferrer noopener"
               className="projectLink"
             >
-              <FaGlobe className="projectIcon" />
+              <FaIcon icon="Globe" className="projectIcon" />
+
               <span>Demo</span>
             </Link>
           )}

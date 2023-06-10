@@ -1,19 +1,6 @@
 import "./Skills.css";
 import { skills } from "../../data/skillsData.js";
-import { FaCode, FaFolder, FaDatabase } from "react-icons/fa";
-
-const SkillIcon = ({ icon }) => {
-  switch (icon) {
-    case "code":
-      return <FaCode className="iconWithBackground" />;
-    case "folder":
-      return <FaFolder className="iconWithBackground" />;
-    case "database":
-      return <FaDatabase className="iconWithBackground" />;
-    default:
-      break;
-  }
-};
+import FaIcon from "../FaIcon/FaIcon.jsx";
 
 const Keyword = ({ keyword }) => {
   return <li>{keyword}</li>;
@@ -33,7 +20,7 @@ const Skill = ({ skill }) => {
   return (
     <li>
       <section className="skillSection">
-        <SkillIcon icon={skill.icon} />
+        <FaIcon icon={skill.icon} className="iconWithBackground" />
         <h1 className="skillTitle">{skill.name}</h1>
         <Keywords keywords={skill.keywords} />
       </section>

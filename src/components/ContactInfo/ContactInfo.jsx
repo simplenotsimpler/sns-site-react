@@ -3,42 +3,13 @@ import "./ContactInfo.css";
 import { basics } from "../../data/basicsData.js";
 import { Link } from "react-router-dom";
 import { getPathName } from "../../helpers.js";
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
-/* note documentation is incorrect per https://github.com/FortAwesome/Font-Awesome/issues/14854 */
-import { faLinkedin, faSquareGithub } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope, faFilePdf } from "@fortawesome/free-solid-svg-icons";
-
-//probably can combine this into one component w/ SkillIcon
-const ContactIcon = ({ icon }) => {
-  switch (icon) {
-    case "Envelope":
-      return (
-        <FontAwesomeIcon icon={faEnvelope} className="iconWithBackground" />
-      );
-    case "LinkedIn":
-      return (
-        <FontAwesomeIcon icon={faLinkedin} className="iconWithBackground" />
-      );
-    case "GitHub":
-      return (
-        <FontAwesomeIcon icon={faSquareGithub} className="iconWithBackground" />
-      );
-    case "PDF":
-      return (
-        <FontAwesomeIcon icon={faFilePdf} className="iconWithBackground" />
-      );
-    default:
-      break;
-  }
-};
+import FaIcon from "../FaIcon/FaIcon.jsx";
 
 const ContactItem = ({ icon, to, children, ...props }) => {
   return (
     <Link to={to} {...props}>
       <div className="contactItem">
-        <ContactIcon icon={icon} />
+        <FaIcon icon={icon} className="iconWithBackground"/>
         {children}
       </div>
     </Link>

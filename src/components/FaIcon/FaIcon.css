@@ -1,0 +1,8 @@
+/* TODO: might need separate container, etc. for bg since icon is actually 45px x 45px */
+.iconWithBackground {
+  width: 60px;
+  height: 60px;
+  color: white;
+  background-color: var(--color-primary);
+  padding: 3px;
+}
