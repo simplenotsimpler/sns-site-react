@@ -86,3 +86,10 @@
     grid-template-columns: repeat(3, var(--width-column));
   }
 }
+
+/* takes into account Galaxy Fold 280px width */
+@media only screen and (max-width: 300px) {
+  .project {
+    width: var(--width-column-narrow);
+  }
+}

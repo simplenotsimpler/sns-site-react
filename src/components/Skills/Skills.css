@@ -12,6 +12,7 @@
   width: var(--width-column);
 }
 
+/* TODO: move this & increase margin bottom */
 .iconWithBackground {
   width: 60px;
   height: 60px;
@@ -38,4 +39,11 @@
 
   font-size: 28px;
   line-height: 113%;
+}
+
+/* takes into account Galaxy Fold 280px width */
+@media only screen and (max-width: 300px) {
+  .skillSection {
+    width: var(--width-column-narrow);
+  }
 }
