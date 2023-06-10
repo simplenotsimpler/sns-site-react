@@ -21,6 +21,8 @@
 
   /* check this, cards are ending up wider than anticipated on 1280 screen */
   --width-standard: 90%;
+
+  /* TODO: fix 280px wide styling - galaxy fold */
   --width-column: 323px;
 }
 
