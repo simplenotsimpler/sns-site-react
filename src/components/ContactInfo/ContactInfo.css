@@ -1,0 +1,18 @@
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.contactLink {
+  font-size: 22px;
+  line-height: 127%;
+  color: var(--color-dark);
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+
+  gap: 30px;
+}

@@ -1,3 +1,5 @@
+import ContactInfo from "../ContactInfo/ContactInfo.jsx";
+
 import "./Contact.css";
 
 //may get the intro copy from db
@@ -13,6 +15,7 @@ const Contact = () => {
           solution will be implemented? If I can be of any assistance, please do
           not hesitate to reach out.
         </p>
+        <ContactInfo />
       </section>
       <section className="contactFormHolder">contact form</section>
     </div>
