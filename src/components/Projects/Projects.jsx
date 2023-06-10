@@ -3,7 +3,6 @@ import "./Projects.css";
 import { projects } from "../../data/projectsData.js";
 import FaIcon from "../FaIcon/FaIcon.jsx";
 
-//TODO: switch to using font awesome directly
 const Project = ({ project }) => {
   return (
     <li>

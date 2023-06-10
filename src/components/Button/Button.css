@@ -15,6 +15,7 @@
 }
 
 .btnLarge {
+  max-width: 100%;
   width: 284px;
   height: 60px;
   /* 34 horizontal 

@@ -1,5 +1,5 @@
+import ContactForm from "../ContactForm/ContactForm.jsx";
 import ContactInfo from "../ContactInfo/ContactInfo.jsx";
-
 import "./Contact.css";
 
 //may get the intro copy from db
@@ -17,7 +17,9 @@ const Contact = () => {
         </p>
         <ContactInfo />
       </section>
-      <section className="contactFormHolder">contact form</section>
+      <section className="contactFormHolder">
+        <ContactForm />
+      </section>
     </div>
   );
 };

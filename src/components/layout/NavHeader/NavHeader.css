@@ -1,5 +1,5 @@
 /* TODO: drop shadow to give navHeader more depth? */
-
+/* Note: stuff not 100% wide on Galaxy Fold b/c of the fold margin */
 .navHeader {
   width: 100%;
   /* height accomodates MacBook Air camera location - per Figma prototype */

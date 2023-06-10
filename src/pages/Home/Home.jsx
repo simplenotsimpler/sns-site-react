@@ -23,7 +23,7 @@ const Home = () => {
         <section id="skills" className="section-style">
           <Skills />
         </section>
-        <section id="contact" className="section-style holder-color">
+        <section id="contact" className="section-style">
           <Contact />
         </section>
       </main>

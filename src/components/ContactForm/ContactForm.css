@@ -1,0 +1,40 @@
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.contactInputGroup {
+  display: flex;
+  flex-direction: column;
+  font-size: 26px;
+  width: 100%;
+}
+.contactFormLabel {
+  color: var(--color-dark);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.contactFormInput,
+.contactFormTextArea {
+  background-color: var(--color-light);
+  border: solid 1px var(--color-primary);
+  border-radius: 3px;
+  padding: 0.5rem;
+}
+.contactFormInput {
+  width: 100%;
+  height: 72px;
+}
+
+.contactFormTextArea {
+  width: 100%;
+  height: 140px;
+}
+
+/* not sure what want for focus styling */
+.contactFormInput:focus,
+.contactFormTextArea:focus {
+  border: solid 2px var(--color-primary);
+}

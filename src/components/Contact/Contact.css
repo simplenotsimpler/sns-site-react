@@ -1,28 +1,45 @@
 .contactContainer {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 5%;
+  min-height: 650px;
+  height: 650px;
 }
 
 .contactContent,
 .contactFormHolder {
-  background-color: pink;
   flex: 1 0 45%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 100%;
 }
 
 .contactTitle {
   font-weight: 700;
-  font-size: 40px;
+  font-size: 32px;
   line-height: 47px;
-  /* identical to box height */
   text-align: center;
   color: var(--color-primary);
   margin-bottom: 1rem;
 }
 
 .contactIntro {
-  font-size: 26px;
+  font-size: 1.625rem;
   line-height: 30px;
   color: var(--color-dark);
   margin-bottom: 1rem;
+  flex: 1;
+}
+
+@media only screen and (max-width: 1280px) {
+  .contactIntro {
+    font-size: 1.25rem;
+  }
+
+  .contactContent {
+    margin-bottom: 1.5rem;
+  }
 }

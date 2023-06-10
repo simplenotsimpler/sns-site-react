@@ -82,4 +82,21 @@ ul {
   list-style: none;
 }
 
+/* reset for forms */
+/* https://developer.mozilla.org/en-US/docs/Learn/Forms/Styling_web_forms */
+form,
+button,
+label,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin-bottom: 0;
+}
 
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
