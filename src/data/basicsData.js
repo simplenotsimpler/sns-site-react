@@ -1,11 +1,11 @@
-//some content needs to be updated per Figma design
 export const basics = {
   website: "https://simplenotsimpler.com",
   email: "contact@simplenotsimpler.com",
-  jobTitle: "Pragmatic Web Developer",
-  keywords: "portfolio, javascript, html, css, web developer, node.js",
+  jobTitle: "software developer",
+  keywords:
+    "portfolio, react, javascript, html, css, web developer, node.js, office developer, data management",
   about:
-    "Pragmatic web developer with a “simple but not simpler” approach to creating user-friendly, accessible applications.",
+    "I’m a software and web developer with a “simple but not simpler” approach to creating responsive, user-friendly, accessible applications.",
   profiles: [
     {
       network: "LinkedIn",
