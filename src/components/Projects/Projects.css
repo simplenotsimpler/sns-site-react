@@ -1,9 +1,11 @@
-/* TODO: fix sizing on galaxy fold & larger so widths work both places */
 .projects {
   display: grid;
   justify-content: center;
   align-items: center;
-  grid-template-columns: repeat(auto-fill, var(--width-column));
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(var(--width-column-narrow), var(--width-column))
+  );
   grid-auto-rows: auto;
   gap: 1.5rem;
 }
@@ -16,7 +18,7 @@
   justify-content: space-between;
   align-items: center;
   border: solid 1px var(--color-primary);
-  min-width: var(--width-column);
+  /* min-width: var(--width-column); */
 }
 
 .projectImgHolder {
