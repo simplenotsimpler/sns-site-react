@@ -20,7 +20,7 @@ const Home = () => {
           <About />
         </section>
         <section id="portfolio" className="homeSection">
-          <h1 className="sectionTitle">Projects</h1>
+          <h1 className="sectionTitle">Portfolio</h1>
           <Projects projects={projects} />
         </section>
         <section id="skills" className="homeSection">
