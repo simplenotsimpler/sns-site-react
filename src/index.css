@@ -92,7 +92,8 @@ button,
 label,
 input,
 select,
-textarea {
+textarea,
+figure {
   font-family: inherit;
   font-size: 100%;
   margin-bottom: 0;

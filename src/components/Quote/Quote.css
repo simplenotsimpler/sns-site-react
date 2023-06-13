@@ -1,31 +1,42 @@
-/* NOTE: these are baseline styles and will need to be adjusted as actually use the component */
-
 .quoteContainer {
   color: var(--color-primary);
-  width: 311px;
-  height: 120px;
+  width: 100%;
 }
 
 .quoteText {
+  display: block;
   font-style: italic;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 140%;
+  text-align: center;
 }
 
 .quoteContainer figcaption {
   font-size: 1rem;
-  margin-left: 17px;
   line-height: 150%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  width: 290px;
 }
 
+.quoteContainer figcaption > cite {
+  margin-left: 20px;
+}
 .quoteContainer a {
   color: inherit;
 }
 
 .quoteContainer a:hover {
+  color: var(--color-dark);
+}
+
+@media only screen and (max-width: 700px) {
+  .quoteText {
+    font-size: 1.125rem;
+  }
+
+  .quoteContainer figcaption {
+    flex-direction: column;
+  }
 }

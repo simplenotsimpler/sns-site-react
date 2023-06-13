@@ -4,7 +4,8 @@ export const basics = {
   jobTitle: "software developer",
   keywords:
     "portfolio, react, javascript, html, css, web developer, node.js, office developer, data management",
-  about:
+  intro: "Hi, I’m Rebecca.",
+  summary:
     "I’m a software and web developer with a “simple but not simpler” approach to creating responsive, user-friendly, accessible applications.",
   profiles: [
     {

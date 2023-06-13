@@ -8,6 +8,7 @@ import { skills } from "../../data/skillsData.js";
 import { projects } from "../../data/projectsData.js";
 
 import "./Home.css";
+import About from "../../components/About/About.jsx";
 
 const Home = () => {
   return (
@@ -15,8 +16,8 @@ const Home = () => {
       <ScrollToHashElement />
       <NavHeader />
       <main className="container">
-        <section id="about" className="homeSection holderColor">
-          About
+        <section id="about" className="homeSection">
+          <About />
         </section>
         <section id="portfolio" className="homeSection">
           <h1 className="sectionTitle">Projects</h1>

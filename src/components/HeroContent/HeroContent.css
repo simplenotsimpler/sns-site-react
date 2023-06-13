@@ -1,0 +1,43 @@
+/* should i be using margin-left not padding? */
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 72px;
+  margin-left: 75px;
+  width: 65%;
+}
+
+.intro {
+  font-weight: 700;
+  font-size: 2.25rem;
+}
+
+.summary {
+  font-weight: 400;
+  font-size: 1.75rem;
+  line-height: 121%;
+  margin-left: 50px;
+}
+
+.heroContent > button {
+  align-self: center;
+}
+
+@media only screen and (max-width: 700px) {
+  .heroContent {
+    width: 100%;
+    margin: 0;
+    align-items: center;
+    gap: 25px;
+    text-align: center;
+  }
+  .intro {
+    font-size: 1.625rem;
+  }
+
+  .summary {
+    margin: 0;
+    font-size: 1.25rem;
+  }
+}
