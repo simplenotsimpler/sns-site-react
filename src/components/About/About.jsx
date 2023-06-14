@@ -1,9 +1,9 @@
 import HeroContent from "../HeroContent/HeroContent.jsx";
 import "./About.css";
-import { basics } from "../../data/basicsData.js";
+
 import Quote from "../Quote/Quote.jsx";
 
-const About = () => {
+const About = ({basics}) => {
   return (
     <div className="aboutContent">
       <HeroContent intro={basics.intro} summary={basics.summary} />

@@ -6,6 +6,7 @@ import ScrollToHashElement from "../../components/layout/ScrollToHashElement.js"
 
 import { skills } from "../../data/skillsData.js";
 import { projects } from "../../data/projectsData.js";
+import { basics } from "../../data/basicsData.js";
 
 import "./Home.css";
 import About from "../../components/About/About.jsx";
@@ -17,7 +18,7 @@ const Home = () => {
       <NavHeader />
       <main className="container">
         <section id="about" className="homeSection">
-          <About />
+          <About basics={basics} />
         </section>
         <section id="portfolio" className="homeSection">
           <h1 className="sectionTitle">Portfolio</h1>
