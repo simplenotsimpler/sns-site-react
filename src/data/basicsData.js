@@ -1,4 +1,6 @@
 export const basics = {
+  name: "Rebecca Hensley",
+  displayName: "Rebecca H.",
   website: "https://simplenotsimpler.com",
   email: "contact@simplenotsimpler.com",
   jobTitle: "software developer",
@@ -7,6 +9,11 @@ export const basics = {
   intro: "Hi, I’m Rebecca.",
   summary:
     "I’m a software and web developer with a “simple but not simpler” approach to creating responsive, user-friendly, accessible applications.",
+  location: {
+    city: "Beech Grove",
+    countryCode: "US",
+    region: "IN",
+  },
   profiles: [
     {
       network: "LinkedIn",
