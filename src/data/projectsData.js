@@ -43,7 +43,7 @@ export const projects = [
   {
     id: "5",
     name: "The Jungle Cook",
-    imgName: "n315-homework-final-v2.png",
+    // imgName: "n315-homework-final-v2.png",
     description:
       "Vanilla JavaScript Single-Page CRUD application with Firestore backend. Responsive design using SASS.",
     url: "https://github.com/iupui-multi-device-certificate/n315-homework-final-v2",

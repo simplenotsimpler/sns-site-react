@@ -2,15 +2,21 @@ import { Link } from "react-router-dom";
 import "./Projects.css";
 
 import FaIcon from "../FaIcon/FaIcon.jsx";
+const DUMMY_IMAGE_URL =
+  "https://dummyimage.com/265x270/080908/ffffff&text=Project";
+// "https://dummyimage.com/800x270/080908/ffffff&text=Project";
 
 const Project = ({ project }) => {
+  const imgUrl = project.imgName
+    ? `/images/projects/${project.imgName}`
+    : DUMMY_IMAGE_URL;
   return (
     <li>
       <article className="project">
         <div
           className="projectImgHolder"
           style={{
-            backgroundImage: `url(/images/projects/${project.imgName})`,
+            backgroundImage: `url(${imgUrl})`,
           }}
         ></div>
 
