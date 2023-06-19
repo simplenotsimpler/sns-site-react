@@ -1,4 +1,4 @@
-import Button from "../Button/Button.jsx";
+import LinkButton from "../Button/LinkButton.jsx";
 import "./HeroContent.css";
 
 const HeroContent = ({ intro, summary }) => {
@@ -6,7 +6,7 @@ const HeroContent = ({ intro, summary }) => {
     <div className="heroContent">
       <p className="intro">{intro}</p>
       <p className="summary">{summary}</p>
-      <Button>Let's Connect</Button>
+      <LinkButton to="#contact">Let's Connect</LinkButton>
     </div>
   );
 };
