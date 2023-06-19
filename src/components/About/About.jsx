@@ -3,7 +3,27 @@ import "./About.css";
 
 import Quote from "../Quote/Quote.jsx";
 
-const About = ({basics}) => {
+//data stuff
+import { useQuery } from "@tanstack/react-query";
+import { fetchBasics } from "../../fetchers/fetchBasics.js";
+
+const About = () => {
+  const {
+    data: basics,
+    isLoading,
+    isError,
+  } = useQuery({
+    queryKey: ["basics"],
+    queryFn: fetchBasics,
+  });
+
+  if (isError) {
+    return <h1> Sorry, there was an error </h1>;
+  }
+
+  if (isLoading) {
+    return <h1> Loading basics...</h1>;
+  }
   return (
     <div className="aboutContent">
       <HeroContent intro={basics.intro} summary={basics.summary} />

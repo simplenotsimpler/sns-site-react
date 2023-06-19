@@ -1,14 +1,22 @@
 import { Link } from "react-router-dom";
 import "./Projects.css";
 
+//data stuff
+import { useQuery } from "@tanstack/react-query";
+import { fetchProjects } from "../../fetchers/fetchProjects.js";
+
 import FaIcon from "../FaIcon/FaIcon.jsx";
 const DUMMY_IMAGE_URL =
   "https://dummyimage.com/265x270/080908/ffffff&text=Project";
 // "https://dummyimage.com/800x270/080908/ffffff&text=Project";
 
+//TODO: fix which repos pinned
+//TODO: add Brickyard as a project
+//TODO: fix repo image sizes
+//TODO: fix repo descriptions
 const Project = ({ project }) => {
-  const imgUrl = project.imgName
-    ? `/images/projects/${project.imgName}`
+  const imgUrl = project.openGraphImageUrl
+    ? project.openGraphImageUrl
     : DUMMY_IMAGE_URL;
   return (
     <li>
@@ -55,7 +63,24 @@ const Project = ({ project }) => {
   );
 };
 
-const Projects = ({ projects }) => {
+const Projects = () => {
+  const {
+    data: projects,
+    isLoading,
+    isError,
+  } = useQuery({
+    queryKey: ["projects"],
+    queryFn: fetchProjects,
+  });
+
+  if (isError) {
+    return <h1> Sorry, there was an error </h1>;
+  }
+
+  if (isLoading) {
+    return <h1> Loading projects...</h1>;
+  }
+
   return (
     <ul className="projects">
       {projects.map((project) => {

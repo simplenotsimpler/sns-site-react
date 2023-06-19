@@ -2,6 +2,10 @@ import "./Skills.css";
 
 import FaIcon from "../FaIcon/FaIcon.jsx";
 
+//data stuff
+import { useQuery } from "@tanstack/react-query";
+import { fetchSkills } from "../../fetchers/fetchSkills.js";
+
 const Keyword = ({ keyword }) => {
   return <li>{keyword}</li>;
 };
@@ -28,8 +32,23 @@ const Skill = ({ skill }) => {
   );
 };
 
+const Skills = () => {
+  const {
+    data: skills,
+    isLoading,
+    isError,
+  } = useQuery({
+    queryKey: ["skills"],
+    queryFn: fetchSkills,
+  });
 
-const Skills = ({skills}) => {
+  if (isError) {
+    return <h1> Sorry, there was an error </h1>;
+  }
+
+  if (isLoading) {
+    return <h1> Loading skills...</h1>;
+  }
   return (
     <ul className="skills">
       {skills.map((skill) => {

@@ -4,13 +4,10 @@ import Skills from "../../components/Skills/Skills.jsx";
 import NavHeader from "../../components/layout/NavHeader/NavHeader.jsx";
 import ScrollToHashElement from "../../components/layout/ScrollToHashElement.js";
 
-import { skills } from "../../data/skillsData.js";
-import { projects } from "../../data/projectsData.js";
-import { basics } from "../../data/basicsData.js";
-
 import "./Home.css";
 import About from "../../components/About/About.jsx";
 
+//TODO: get a real spinner
 const Home = () => {
   return (
     <>
@@ -18,15 +15,15 @@ const Home = () => {
       <NavHeader />
       <main className="container">
         <section id="about" className="homeSection">
-          <About basics={basics} />
+          <About />
         </section>
         <section id="portfolio" className="homeSection">
           <h1 className="sectionTitle">Portfolio</h1>
-          <Projects projects={projects} />
+          <Projects />
         </section>
         <section id="skills" className="homeSection">
           <h1 className="sectionTitle">Skills</h1>
-          <Skills skills={skills} />
+          <Skills />
         </section>
         <section id="contact" className="homeSection">
           <h1 className="sectionTitle">Contact</h1>
