@@ -52,7 +52,7 @@ const Skills = () => {
   return (
     <ul className="skills">
       {skills.map((skill) => {
-        return <Skill skill={skill} key={skill.id} />;
+        return <Skill skill={skill} key={skill._id} />;
       })}
     </ul>
   );

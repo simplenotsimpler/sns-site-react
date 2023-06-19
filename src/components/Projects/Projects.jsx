@@ -83,8 +83,8 @@ const Projects = () => {
 
   return (
     <ul className="projects">
-      {projects.map((project) => {
-        return <Project project={project} key={project.id} />;
+      {projects.map((project, index) => {
+        return <Project project={project} key={index} />;
       })}
     </ul>
   );
