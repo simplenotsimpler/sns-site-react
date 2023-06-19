@@ -10,10 +10,6 @@ const DUMMY_IMAGE_URL =
   "https://dummyimage.com/265x270/080908/ffffff&text=Project";
 // "https://dummyimage.com/800x270/080908/ffffff&text=Project";
 
-//TODO: fix which repos pinned
-//TODO: add Brickyard as a project
-//TODO: fix repo image sizes
-//TODO: fix repo descriptions
 const Project = ({ project }) => {
   const imgUrl = project.openGraphImageUrl
     ? project.openGraphImageUrl
