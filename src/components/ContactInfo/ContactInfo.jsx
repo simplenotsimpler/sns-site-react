@@ -9,13 +9,16 @@ const ContactItem = ({ icon, to, children, ...props }) => {
   return (
     <Link to={to} {...props}>
       <div className="contactItem">
-        <FaIcon icon={icon} className="iconWithBackground"/>
+        <FaIcon icon={icon} className="iconWithBackground" />
         {children}
       </div>
     </Link>
   );
 };
 
+//TODO: style resume page & components in figma
+//TODO: replace the link with generated PDF
+//TODO: add a download Word doc which you can use as basis for your custom resumes
 const ContactInfo = () => {
   return (
     <div className="contactInfo">
@@ -38,7 +41,7 @@ const ContactInfo = () => {
           </ContactItem>
         );
       })}
-      {/* replace to with generated link */}
+
       <ContactItem to="" icon="PDF" className="contactLink">
         Download PDF
       </ContactItem>

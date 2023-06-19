@@ -7,7 +7,7 @@ import ScrollToHashElement from "../../components/layout/ScrollToHashElement.js"
 import "./Home.css";
 import About from "../../components/About/About.jsx";
 
-//TODO: get a real spinner
+//TODO: get a real spinner or use skeleton
 const Home = () => {
   return (
     <>

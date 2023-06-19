@@ -1,6 +1,7 @@
 import Button from "../Button/Button.jsx";
 import "./ContactForm.css";
 
+//TODO: make form functional
 //form is not functional yet & no validation. may need to adapt this depending on solution for submitting form, maybe EmailJS?
 const ContactInput = ({ label, inputName, isRequired = false }) => {
   return (
