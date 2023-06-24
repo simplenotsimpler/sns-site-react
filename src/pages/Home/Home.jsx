@@ -1,11 +1,14 @@
-import Contact from "../../components/Contact/Contact.jsx";
-import Projects from "../../components/Projects/Projects.jsx";
-import Skills from "../../components/Skills/Skills.jsx";
-import NavHeader from "../../components/layout/NavHeader/NavHeader.jsx";
 import ScrollToHashElement from "../../components/layout/ScrollToHashElement.js";
+import NavHeader from "../../components/layout/NavHeader/NavHeader.jsx";
+
+import About from "../../components/About/About.jsx";
+import ProjectCards from "../../features/Projects/ProjectCards/ProjectCards.jsx";
+import Skills from "../../components/Skills/Skills.jsx";
+
+import Contact from "../../components/Contact/Contact.jsx";
 
 import "./Home.css";
-import About from "../../components/About/About.jsx";
+import Projects from "../../features/Projects/Projects.jsx";
 
 //TODO: get a real spinner or use skeleton
 const Home = () => {
@@ -19,6 +22,7 @@ const Home = () => {
         </section>
         <section id="portfolio" className="homeSection">
           <h1 className="sectionTitle">Portfolio</h1>
+
           <Projects />
         </section>
         <section id="skills" className="homeSection">
