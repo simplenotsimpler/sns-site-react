@@ -1,5 +1,5 @@
-import ContactForm from "../ContactForm/ContactForm.jsx";
-import ContactInfo from "../ContactInfo/ContactInfo.jsx";
+import ContactForm from "./ContactForm/ContactForm.jsx";
+import ContactInfo from "./ContactInfo/ContactInfo.jsx";
 import "./Contact.css";
 
 //data stuff
@@ -28,7 +28,7 @@ const Contact = () => {
       <section className="contactContent">
         <h1 className="contactTitle">Let’s Connect !!!</h1>
         <p className="contactCTA">{basics.contactCTA}</p>
-        <ContactInfo email={basics.email} profiles={basics.profiles}/>
+        <ContactInfo email={basics.email} profiles={basics.profiles} />
       </section>
       <section className="contactFormHolder">
         <ContactForm />

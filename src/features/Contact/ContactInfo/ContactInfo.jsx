@@ -1,8 +1,9 @@
 import "./ContactInfo.css";
 
 import { Link } from "react-router-dom";
-import { getPathName } from "../../helpers.js";
-import FaIcon from "../FaIcon/FaIcon.jsx";
+import { getPathName } from "../../../helpers.js";
+
+import FaIcon from "../../../components/FaIcon/FaIcon.jsx";
 
 const ContactItem = ({ icon, to, children, ...props }) => {
   return (
@@ -15,7 +16,7 @@ const ContactItem = ({ icon, to, children, ...props }) => {
   );
 };
 
-//TODO: style resume page & components in figma
+//TODO: make this reusable for resume? horizontal option, use outside container?
 //TODO: replace the link with generated PDF
 //TODO: add a download Word doc which you can use as basis for your custom resumes
 const ContactInfo = ({ email, profiles }) => {

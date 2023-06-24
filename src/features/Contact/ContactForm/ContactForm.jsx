@@ -1,4 +1,4 @@
-import Button from "../Button/Button.jsx";
+import Button from "../../../components/Button/Button.jsx";
 import "./ContactForm.css";
 
 //TODO: make form functional

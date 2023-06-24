@@ -4,8 +4,8 @@ import NavHeader from "../../components/layout/NavHeader/NavHeader.jsx";
 import About from "../../features/About/About.jsx";
 import Projects from "../../features/Projects/Projects.jsx";
 import Skills from "../../features/Skills/Skills.jsx";
+import Contact from "../../features/Contact/Contact.jsx";
 
-import Contact from "../../components/Contact/Contact.jsx";
 
 import "./Home.css";
 
