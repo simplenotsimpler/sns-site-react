@@ -1,7 +1,7 @@
-import HeroContent from "../HeroContent/HeroContent.jsx";
 import "./About.css";
 
-import Quote from "../Quote/Quote.jsx";
+import HeroContent from "./HeroContent/HeroContent.jsx";
+import Quote from "./Quote/Quote.jsx";
 
 //data stuff
 import { useQuery } from "@tanstack/react-query";

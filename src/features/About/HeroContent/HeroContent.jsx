@@ -1,4 +1,4 @@
-import LinkButton from "../Button/LinkButton.jsx";
+import LinkButton from "../../../components/Button/LinkButton.jsx";
 import "./HeroContent.css";
 
 const HeroContent = ({ intro, summary }) => {

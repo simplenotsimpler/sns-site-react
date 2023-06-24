@@ -1,7 +1,7 @@
 import ScrollToHashElement from "../../components/layout/ScrollToHashElement.js";
 import NavHeader from "../../components/layout/NavHeader/NavHeader.jsx";
 
-import About from "../../components/About/About.jsx";
+import About from "../../features/About/About.jsx";
 import Projects from "../../features/Projects/Projects.jsx";
 import Skills from "../../features/Skills/Skills.jsx";
 
