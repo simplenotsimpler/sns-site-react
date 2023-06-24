@@ -1,0 +1,35 @@
+/* styling is primarily print-based */
+
+body {
+  font-family: "Arial";
+  font-size: 0.875rem;
+}
+
+
+/* Defining all page breaks */
+a,
+blockquote,
+q,
+table,
+pre,
+ul,
+ol,
+dl,
+p,
+p>span,
+li,
+section {
+  page-break-inside: avoid;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+img,
+figure {
+  page-break-after: avoid;
+  page-break-inside: avoid;
+}
