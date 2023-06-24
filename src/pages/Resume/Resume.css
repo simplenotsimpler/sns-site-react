@@ -1,10 +1,25 @@
 /* styling is primarily print-based */
+* {
+  box-sizing: border-box;
+}
 
 body {
   font-family: "Arial";
-  font-size: 0.875rem;
+  font-size: 1rem;
+  color: black;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
 
 /* Defining all page breaks */
 a,
@@ -16,7 +31,7 @@ ul,
 ol,
 dl,
 p,
-p>span,
+p > span,
 li,
 section {
   page-break-inside: avoid;
