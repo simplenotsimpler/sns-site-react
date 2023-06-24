@@ -1,4 +1,4 @@
-.skills {
+.skillCards {
   display: flex;
   /* justify-content: space-between; */
   justify-content: center;
@@ -7,12 +7,12 @@
   gap: 1.5rem;
 }
 
-.skillSection {
+.skillCardSection {
   text-align: center;
   width: var(--width-column);
 }
 
-.skillTitle {
+.skillCardTitle {
   text-transform: capitalize;
   font-weight: 700;
   font-size: 30px;
@@ -22,7 +22,7 @@
   margin: 1.25rem 0;
 }
 
-.keywords {
+.skillCardKeywords {
   display: flex;
   flex-direction: column;
   align-items: space-between;
@@ -35,7 +35,7 @@
 
 /* takes into account Galaxy Fold 280px width */
 @media only screen and (max-width: 300px) {
-  .skillSection {
+  .skillCardSection {
     width: var(--width-column-narrow);
   }
 }
