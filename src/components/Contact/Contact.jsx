@@ -2,20 +2,33 @@ import ContactForm from "../ContactForm/ContactForm.jsx";
 import ContactInfo from "../ContactInfo/ContactInfo.jsx";
 import "./Contact.css";
 
-//may get the intro copy from db
+//data stuff
+import { useQuery } from "@tanstack/react-query";
+import { fetchBasics } from "../../fetchers/fetchBasics.js";
 
 const Contact = () => {
+  const {
+    data: basics,
+    isLoading,
+    isError,
+  } = useQuery({
+    queryKey: ["basics"],
+    queryFn: fetchBasics,
+  });
+
+  if (isError) {
+    return <h1> Sorry, there was an error </h1>;
+  }
+
+  if (isLoading) {
+    return <h1> Loading contact...</h1>;
+  }
   return (
     <div className="contactContainer">
       <section className="contactContent">
         <h1 className="contactTitle">Let’s Connect !!!</h1>
-        <p className="contactIntro">
-          Do you need to launch a website, improve an existing website, or need
-          an Office application to bridge the gap until a more permanent
-          solution will be implemented? If I can be of any assistance, please do
-          not hesitate to reach out.
-        </p>
-        <ContactInfo />
+        <p className="contactCTA">{basics.contactCTA}</p>
+        <ContactInfo email={basics.email} profiles={basics.profiles}/>
       </section>
       <section className="contactFormHolder">
         <ContactForm />

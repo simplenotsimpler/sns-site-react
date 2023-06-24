@@ -27,14 +27,14 @@
   margin-bottom: 1rem;
 }
 
-.contactIntro {
+.contactCTA {
   font-size: 1.625rem;
   line-height: 30px;
   margin-bottom: 1rem;
 }
 
 @media only screen and (max-width: 1280px) {
-  .contactIntro {
+  .contactCTA {
     font-size: 1.25rem;
   }
 
@@ -43,9 +43,3 @@
   }
 }
 
-/* @media only screen and (min-width: 1280px) {
-  .contactContent,
-  .contactFormHolder {
-    padding: 0 2rem;
-  }
-} */

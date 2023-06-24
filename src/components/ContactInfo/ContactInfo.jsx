@@ -1,6 +1,5 @@
 import "./ContactInfo.css";
 
-import { basics } from "../../data/basicsData.js";
 import { Link } from "react-router-dom";
 import { getPathName } from "../../helpers.js";
 import FaIcon from "../FaIcon/FaIcon.jsx";
@@ -19,17 +18,17 @@ const ContactItem = ({ icon, to, children, ...props }) => {
 //TODO: style resume page & components in figma
 //TODO: replace the link with generated PDF
 //TODO: add a download Word doc which you can use as basis for your custom resumes
-const ContactInfo = () => {
+const ContactInfo = ({ email, profiles }) => {
   return (
     <div className="contactInfo">
       <ContactItem
-        to={`mailto:${basics.email}`}
+        to={`mailto:${email}`}
         icon="Envelope"
         className="contactLink"
       >
-        {basics.email}
+        {email}
       </ContactItem>
-      {basics.profiles.map((profile, index) => {
+      {profiles.map((profile, index) => {
         return (
           <ContactItem
             to={profile.url}
