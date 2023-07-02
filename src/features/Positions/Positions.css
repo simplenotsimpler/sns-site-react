@@ -1,0 +1,34 @@
+.positionHeader {
+  display: grid;
+  grid-template-columns: inherit;
+  grid-template-areas:
+    "position-title . position-date"
+    "position-company . position-location";
+  /* set row and col gaps separately */
+  column-gap: inherit;
+  row-gap: inherit;
+}
+
+.positionHeader > * {
+  margin-bottom: 0.5rem;
+}
+
+.positionTitle {
+  grid-area: position-title;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.positionDate {
+  grid-area: position-date;
+  justify-self: end;
+}
+
+.positionCompany {
+  grid-area: position-company;
+}
+
+.positionLocation {
+  grid-area: position-location;
+  justify-self: end;
+}

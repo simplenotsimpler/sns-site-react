@@ -1,50 +1,137 @@
 /* styling is primarily print-based */
-* {
-  box-sizing: border-box;
-}
 
-body {
-  font-family: "Arial";
-  font-size: 1rem;
-  color: black;
-}
+/* NOTE: browsers do not respect using page counters via CSS */
 
+/* TODO: phase 2 - print to Word and/or PDF */
+
+/* only need to add page breaks. other tags reset via index.css */
 h1,
 h2,
 h3,
 h4,
 h5,
 h6,
-p,
-ul {
-  margin: 0;
-  padding: 0;
-}
-
-/* Defining all page breaks */
-a,
-blockquote,
-q,
-table,
-pre,
-ul,
-ol,
-dl,
 p,
 p > span,
+ul,
 li,
 section {
-  page-break-inside: avoid;
+  break-inside: avoid-page;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-img,
-figure {
-  page-break-after: avoid;
-  page-break-inside: avoid;
+@page {
+  margin: 1in;
+  size: letter;
+}
+
+.resumePage {
+  font-family: "Arial", sans-serif;
+  font-size: 0.85rem;
+  color: black;
+  /* padding: 1.25rem; */
+  /* margin: 1in; */
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 0.5fr;
+  grid-template-areas:
+    "header-area header-area header-area"
+    "main-area main-area main-area";
+
+  column-gap: 1rem;
+  row-gap: 0.5rem;
+
+  padding-bottom: 0.5rem;
+}
+
+.resumePage a {
+  color: inherit;
+}
+
+.resumeList {
+  list-style: inside;
+  padding-left: 1rem;
+}
+
+.resumeList > li {
+  margin-bottom: 0.5rem;
+}
+
+.resumeHeader {
+  border-bottom: 1px solid;
+  margin-bottom: 1rem;
+
+  grid-area: header-area;
+  display: grid;
+  grid-template-columns: inherit;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "resume-title resume-title resume-title"
+    "location phone email"
+    "linked-in . website";
+
+  /* set row and col gaps separately */
+  column-gap: inherit;
+  row-gap: inherit;
+}
+
+.resumeHeader > * {
+  margin-bottom: 0.5rem;
+}
+
+.resumeMain {
+  grid-area: main-area;
+  display: grid;
+  grid-template-columns: inherit;
+  grid-template-areas:
+    "projects-area projects-area projects-area"
+    "skills-area skills-area skills-area"
+    "education-area education-area education-area"
+    "work-area work-area work-area";
+
+  /* set row and col gaps separately */
+  column-gap: inherit;
+  row-gap: inherit;
+}
+.resumeSection {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.resumeSectionHeading {
+  font-weight: 700;
+  line-height: 143%;
+  letter-spacing: 5.2px;
+  text-transform: uppercase;
+  border-bottom: 1px solid;
+  margin-bottom: 1rem;
+}
+
+.resumeProjects {
+  grid-area: projects-area;
+  break-after: page;
+}
+
+.resumeSkills {
+  grid-area: skills-area;
+}
+
+/* goes to top of page otherwise in print preview */
+/* @media print {
+  .resumeSkills {
+    margin-top: 1in;
+  }
+} */
+
+.resumeEducation {
+  grid-area: education-area;
+}
+
+.resumeWork {
+  grid-area: work-area;
+}
+
+/* so don't have extra space in the print view */
+@media screen {
+  .resumePage {
+    margin: 1in;
+  }
 }

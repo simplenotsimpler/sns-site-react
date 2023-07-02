@@ -1,0 +1,16 @@
+.resumeProjectItem,
+.githubLink {
+  margin-bottom: 1rem;
+}
+
+.resumeProjectItem > * {
+  margin-bottom: 0.5rem;
+}
+.resumeProjectTitle {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.resumeProjectLinkTitle {
+  font-weight: 700;
+}

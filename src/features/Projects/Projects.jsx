@@ -3,10 +3,10 @@ import ProjectCards from "./ProjectCards/ProjectCards.jsx";
 //data stuff
 import { useQuery } from "@tanstack/react-query";
 import { fetchProjects } from "../../fetchers/fetchProjects.js";
+import ResumeProjectList from "./ResumeProjectList/ResumeProjectList.jsx";
 
-//TODO: add flag so can specify for portfolio or resume
-// this is so can return a project list for the resume instead of cards
-const Projects = () => {
+// forResume flag - so can return a project list for the resume instead of cards
+const Projects = ({ forResume = false, githubLink = null }) => {
   const {
     data: projects,
     isLoading,
@@ -22,6 +22,16 @@ const Projects = () => {
 
   if (isLoading) {
     return <h1> Loading projects...</h1>;
+  }
+
+  if (forResume) {
+    return (
+      <ResumeProjectList
+        projects={projects}
+        forResume={true}
+        githubLink={githubLink}
+      />
+    );
   }
   return <ProjectCards projects={projects} />;
 };

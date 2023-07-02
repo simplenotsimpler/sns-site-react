@@ -3,10 +3,10 @@ import SkillCards from "./SkillCards/SkillsCards.jsx";
 //data stuff
 import { useQuery } from "@tanstack/react-query";
 import { fetchSkills } from "../../fetchers/fetchSkills.js";
+import ResumeSkillList from "./ResumeSkillList/ResumeSkillList.jsx";
 
-//TODO: add flag so can specify for portfolio or resume
 // this is so can return a skills list for the resume instead of cards
-const Skills = () => {
+const Skills = ({ forResume = false }) => {
   const {
     data: skills,
     isLoading,
@@ -24,6 +24,9 @@ const Skills = () => {
     return <h1> Loading skills...</h1>;
   }
 
+  if (forResume) {
+    return <ResumeSkillList skills={skills} />;
+  }
   return <SkillCards skills={skills} />;
 };
 export default Skills;

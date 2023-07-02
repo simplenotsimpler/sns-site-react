@@ -1,0 +1,38 @@
+.resumeEducationItem {
+  margin-bottom: 1rem;
+}
+
+.institutionHeader {
+  display: grid;
+  grid-template-columns: inherit;
+  grid-template-areas:
+    "degree . degree-date"
+    "institution . institution-location";
+  /* set row and col gaps separately */
+  column-gap: inherit;
+  row-gap: inherit;
+}
+
+.institutionHeader > * {
+  margin-bottom: 0.5rem;
+}
+
+.resumeDegree {
+  grid-area: degree;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.resumeDegreeDate {
+  grid-area: degree-date;
+  justify-self: end;
+}
+
+.resumeDegreeInstitution {
+  grid-area: institution;
+}
+
+.resumeDegreeLocation {
+  grid-area: institution-location;
+  justify-self: end;
+}

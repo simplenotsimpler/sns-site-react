@@ -12,3 +12,27 @@ export const getPathName = (stringUri) => {
   const url = new URL(stringUri);
   return url.pathname;
 };
+
+export function formatYear(stringDate) {
+  return new Date(stringDate).getFullYear();
+}
+
+export function formatWorkDate(stringDate) {
+  //try convert to date object
+  const workDate = new Date(stringDate);
+
+  //check if not a date, e.g. 'Present'
+  if (isNaN(workDate)) {
+    return stringDate;
+  }
+
+  return workDate.toLocaleDateString("default", {
+    month: "short",
+    year: "numeric",
+  });
+}
+
+//use find to get single object instead of array
+//https://stackoverflow.com/questions/51747519/returning-a-single-value-from-a-filter
+export const getProfile = (profiles, profileToRetrieve) =>
+  profiles.find((profile) => profile.network === profileToRetrieve);

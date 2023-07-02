@@ -1,0 +1,26 @@
+.resumeSkillList {
+  list-style: inside;
+  padding-left: 1rem;
+}
+
+.resumeSkillTitle {
+  margin-right: 0.5rem;
+  display: inline;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+/* either inline-flex or need to add inline to both the ul & li elements */
+.resumeKeywords {
+  display: inline-flex;
+}
+
+.resumeKeywords > li {
+  margin: 0;
+  padding: 0 0.25rem;
+  border-right: 1px solid;
+}
+
+.resumeKeywords > li:last-child {
+  border-right: none;
+}
