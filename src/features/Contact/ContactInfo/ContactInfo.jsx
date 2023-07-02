@@ -42,8 +42,8 @@ const ContactInfo = ({ email, profiles }) => {
         );
       })}
 
-      <ContactItem to="" icon="PDF" className="contactLink">
-        Download PDF
+      <ContactItem to="/resume" icon="File" className="contactLink">
+        Resume
       </ContactItem>
     </div>
   );
