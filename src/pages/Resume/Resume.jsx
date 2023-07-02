@@ -8,24 +8,13 @@ import Skills from "../../features/Skills/Skills.jsx";
 import "../Resume/Resume.css";
 
 //data stuff
-import { useQuery } from "@tanstack/react-query";
-import { fetchBasics } from "../../fetchers/fetchBasics.js";
+import { useBasics } from "../../hooks/useBasics.js";
 
 //helper
 import { getProfile } from "../../helpers.js";
 
-//TODO: maybe move query to hook so can reuse better & need higher up for meta tag stuff
-
 const Resume = () => {
-
-  const {
-    data: basics,
-    isLoading,
-    isError,
-  } = useQuery({
-    queryKey: ["basics"],
-    queryFn: fetchBasics,
-  });
+  const { data: basics, isLoading, isError } = useBasics();
 
   if (isError) {
     return <h1> Sorry, there was an error </h1>;

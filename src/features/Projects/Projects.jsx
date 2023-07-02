@@ -1,20 +1,12 @@
 import ProjectCards from "./ProjectCards/ProjectCards.jsx";
 
 //data stuff
-import { useQuery } from "@tanstack/react-query";
-import { fetchProjects } from "../../fetchers/fetchProjects.js";
+import { useProjects } from "../../hooks/useProjects.js";
 import ResumeProjectList from "./ResumeProjectList/ResumeProjectList.jsx";
 
 // forResume flag - so can return a project list for the resume instead of cards
 const Projects = ({ forResume = false, githubLink = null }) => {
-  const {
-    data: projects,
-    isLoading,
-    isError,
-  } = useQuery({
-    queryKey: ["projects"],
-    queryFn: fetchProjects,
-  });
+  const { data: projects, isLoading, isError } = useProjects();
 
   if (isError) {
     return <h1> Sorry, there was an error </h1>;

@@ -2,8 +2,7 @@ import "./Education.css";
 import { formatYear } from "../../helpers.js";
 
 //data stuff
-import { useQuery } from "@tanstack/react-query";
-import { fetchEducation } from "../../fetchers/fetchEducation.js";
+import { useEducation } from "../../hooks/useEducation.js";
 
 const EducationItem = ({ education }) => {
   return (
@@ -26,14 +25,7 @@ const EducationItem = ({ education }) => {
 };
 
 const Education = () => {
-  const {
-    data: education,
-    isLoading,
-    isError,
-  } = useQuery({
-    queryKey: ["edcuation"],
-    queryFn: fetchEducation,
-  });
+  const { data: education, isLoading, isError } = useEducation();
 
   if (isError) {
     return <h1> Sorry, there was an error </h1>;

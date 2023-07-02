@@ -4,18 +4,10 @@ import HeroContent from "./HeroContent/HeroContent.jsx";
 import Quote from "./Quote/Quote.jsx";
 
 //data stuff
-import { useQuery } from "@tanstack/react-query";
-import { fetchBasics } from "../../fetchers/fetchBasics.js";
+import { useBasics } from "../../hooks/useBasics.js";
 
 const About = () => {
-  const {
-    data: basics,
-    isLoading,
-    isError,
-  } = useQuery({
-    queryKey: ["basics"],
-    queryFn: fetchBasics,
-  });
+  const { data: basics, isLoading, isError } = useBasics();
 
   if (isError) {
     return <h1> Sorry, there was an error </h1>;

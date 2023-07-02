@@ -1,7 +1,6 @@
 import "./Positions.css";
 //data stuff
-import { useQuery } from "@tanstack/react-query";
-import { fetchWork } from "../../fetchers/fetchWork.js";
+import { useWork } from "../../hooks/useWork.js";
 
 import { formatWorkDate } from "../../helpers.js";
 
@@ -31,14 +30,7 @@ const Position = ({ position }) => {
 };
 
 const Positions = () => {
-  const {
-    data: positions,
-    isLoading,
-    isError,
-  } = useQuery({
-    queryKey: ["work"],
-    queryFn: fetchWork,
-  });
+  const { data: positions, isLoading, isError } = useWork();
 
   if (isError) {
     return <h1> Sorry, there was an error </h1>;
