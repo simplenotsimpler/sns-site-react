@@ -36,7 +36,7 @@ const Home = () => {
         name={basics.siteName}
         type={basics.twitterCardType}
         websiteUrl={basics.website}
-        ogImgUrl="/images/sns-site-react.png"
+        ogImgUrl={process.env.SITE_OGIMG_URL}
       />
       <NavHeader />
       <main className="container">
