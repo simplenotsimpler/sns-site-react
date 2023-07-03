@@ -9,7 +9,7 @@ const ResumeHeader = ({ basics }) => {
   const LinkedInProfile = getProfile(basics.profiles, "LinkedIn");
 
   return (
-    <>
+    <header className="resumeHeader">
       <h1 className="resumeTitle">{basics.name}</h1>
 
       <p className="resumeLocation">
@@ -37,7 +37,7 @@ const ResumeHeader = ({ basics }) => {
       >
         {cleanUri(basics.website)}
       </Link>
-    </>
+      </header>
   );
 };
 export default ResumeHeader;

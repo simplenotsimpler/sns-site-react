@@ -55,27 +55,7 @@ section {
   margin-bottom: 0.5rem;
 }
 
-.resumeHeader {
-  border-bottom: 1px solid;
-  margin-bottom: 1rem;
 
-  grid-area: header-area;
-  display: grid;
-  grid-template-columns: inherit;
-  grid-template-rows: auto;
-  grid-template-areas:
-    "resume-title resume-title resume-title"
-    "location phone email"
-    "linked-in . website";
-
-  /* set row and col gaps separately */
-  column-gap: inherit;
-  row-gap: inherit;
-}
-
-.resumeHeader > * {
-  margin-bottom: 0.5rem;
-}
 
 .resumeMain {
   grid-area: main-area;
@@ -132,6 +112,18 @@ section {
 /* so don't have extra space in the print view */
 @media screen {
   .resumePage {
-    margin: 1in;
+    padding: 1in;
+  }
+}
+
+@media only screen and (max-width: 972px) {
+  .resumePage {
+    padding: 1rem;
+  }
+}
+
+@media only screen and (max-width: 972px) {
+  .resumePage {
+    padding: 1rem;
   }
 }

@@ -38,9 +38,9 @@ const Resume = () => {
         type={basics.twitterCardType}
         websiteUrl={`${basics.website}/resume`}
       />
-      <header className="resumeHeader">
-        <ResumeHeader basics={basics} />
-      </header>
+
+      <ResumeHeader basics={basics} />
+
       <main className="resumeMain">
         <section className="resumeSection resumeProjects">
           <h2 className="resumeSectionHeading">Projects</h2>
