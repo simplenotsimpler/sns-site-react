@@ -1,3 +1,6 @@
+//data stuff
+import { useBasics } from "../../hooks/useBasics.js";
+
 import ScrollToHashElement from "../../components/layout/ScrollToHashElement.js";
 import NavHeader from "../../components/layout/NavHeader/NavHeader.jsx";
 
@@ -6,14 +9,35 @@ import Projects from "../../features/Projects/Projects.jsx";
 import Skills from "../../features/Skills/Skills.jsx";
 import Contact from "../../features/Contact/Contact.jsx";
 
-
 import "./Home.css";
+import SEO from "../../components/layout/SEO.jsx";
 
 //TODO: get a real spinner or use skeleton
+
+//generate ogimg on fly?
 const Home = () => {
+  const { data: basics, isLoading, isError } = useBasics();
+
+  if (isError) {
+    return <h1> Sorry, there was an error </h1>;
+  }
+
+  if (isLoading) {
+    return <h1> Loading portfolio...</h1>;
+  }
+
   return (
     <>
       <ScrollToHashElement />
+      <SEO
+        title={`${basics.siteName} | Portfolio`}
+        description={basics.summary}
+        keywords={basics.keywords}
+        name={basics.siteName}
+        type={basics.twitterCardType}
+        websiteUrl={basics.website}
+        ogImgUrl="/images/sns-site-react.png"
+      />
       <NavHeader />
       <main className="container">
         <section id="about" className="homeSection">

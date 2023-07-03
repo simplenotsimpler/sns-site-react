@@ -12,6 +12,7 @@ import { useBasics } from "../../hooks/useBasics.js";
 
 //helper
 import { getProfile } from "../../helpers.js";
+import SEO from "../../components/layout/SEO.jsx";
 
 const Resume = () => {
   const { data: basics, isLoading, isError } = useBasics();
@@ -28,6 +29,15 @@ const Resume = () => {
 
   return (
     <div className="resumePage">
+      <SEO
+        // title={`${basics.siteName} | Resume`}
+        title={`${basics.name} | Resume`}
+        description={basics.summary}
+        keywords={basics.keywords}
+        name={basics.siteName}
+        type={basics.twitterCardType}
+        websiteUrl={`${basics.website}/resume`}
+      />
       <header className="resumeHeader">
         <ResumeHeader basics={basics} />
       </header>
