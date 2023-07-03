@@ -16,9 +16,6 @@ const ContactItem = ({ icon, to, children, ...props }) => {
   );
 };
 
-//TODO: replace the link with generated PDF
-//TODO: add a download Word doc which you can use as basis for your custom resumes
-//TODO: add target="_blank" rel="noreferrer noopener" to links so open in new tab/window
 const ContactInfo = ({ email, profiles }) => {
   return (
     <div className="contactInfo">
@@ -36,13 +33,21 @@ const ContactInfo = ({ email, profiles }) => {
             icon={profile.network}
             key={index}
             className="contactLink"
+            target="_blank"
+            rel="noreferrer noopener"
           >
             {getPathName(profile.url)}
           </ContactItem>
         );
       })}
 
-      <ContactItem to="/resume" icon="File" className="contactLink">
+      <ContactItem
+        to="/resume"
+        icon="File"
+        className="contactLink"
+        target="_blank"
+        rel="noreferrer noopener"
+      >
         Resume
       </ContactItem>
     </div>

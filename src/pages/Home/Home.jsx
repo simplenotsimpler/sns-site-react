@@ -12,7 +12,7 @@ import Contact from "../../features/Contact/Contact.jsx";
 import "./Home.css";
 import SEO from "../../components/layout/SEO.jsx";
 
-//TODO: get a real spinner or use skeleton
+//TODO: phase 2: get a real spinner or use skeleton
 
 //generate ogimg on fly?
 const Home = () => {

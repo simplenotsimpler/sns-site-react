@@ -3,8 +3,6 @@ import { getProfile } from "../../helpers.js";
 import { cleanUri } from "../../helpers.js";
 import { Link } from "react-router-dom";
 
-//TODO: maybe move to Contact feature so can share query there
-
 const ResumeHeader = ({ basics }) => {
   const LinkedInProfile = getProfile(basics.profiles, "LinkedIn");
 
@@ -37,7 +35,7 @@ const ResumeHeader = ({ basics }) => {
       >
         {cleanUri(basics.website)}
       </Link>
-      </header>
+    </header>
   );
 };
 export default ResumeHeader;
