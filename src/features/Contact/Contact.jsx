@@ -22,9 +22,9 @@ const Contact = () => {
         <p className="contactCTA">{basics.contactCTA}</p>
         <ContactInfo email={basics.email} profiles={basics.profiles} />
       </section>
-      <section className="contactFormHolder">
+      {/* <section className="contactFormHolder">
         <ContactForm />
-      </section>
+      </section> */}
     </div>
   );
 };
