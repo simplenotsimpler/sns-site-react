@@ -1,5 +1,3 @@
-import { useEffect } from "react";
-
 import Education from "../../features/Education/Education.jsx";
 import Positions from "../../features/Positions/Positions.jsx";
 import Projects from "../../features/Projects/Projects.jsx";

@@ -1,4 +1,4 @@
-import ContactForm from "./ContactForm/ContactForm.jsx";
+// import ContactForm from "./ContactForm/ContactForm.jsx";
 import ContactInfo from "./ContactInfo/ContactInfo.jsx";
 import "./Contact.css";
 
@@ -22,6 +22,7 @@ const Contact = () => {
         <p className="contactCTA">{basics.contactCTA}</p>
         <ContactInfo email={basics.email} profiles={basics.profiles} />
       </section>
+
       {/* <section className="contactFormHolder">
         <ContactForm />
       </section> */}
