@@ -1,13 +1,17 @@
 .contactInfo {
-  display: flex;
-  flex-direction: column;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 0.5fr 0.5fr;
   gap: 1.75rem;
+
+  background-color: antiquewhite;
 }
 
 .contactLink {
   font-size: 1.375rem;
   line-height: 127%;
   color: inherit;
+  background-color: pink;
 }
 
 .contactItem {
@@ -27,5 +31,11 @@
     word-wrap: break-word;
     /* this actually causes it to wrap */
     word-break: break-all;
+  }
+}
+
+@media only screen and (max-width: 972px) {
+  .contactInfo {
+    grid-template-columns: 1fr;
   }
 }

@@ -48,7 +48,7 @@ const ContactInfo = ({ email, profiles }) => {
         target="_blank"
         rel="noreferrer noopener"
       >
-        Resume
+        /resume
       </ContactItem>
     </div>
   );
