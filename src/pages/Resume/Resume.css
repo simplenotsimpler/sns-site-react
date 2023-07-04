@@ -18,12 +18,6 @@ li,
 section {
   break-inside: avoid-page;
 }
-
-@page {
-  margin: 1in;
-  size: letter;
-}
-
 .resumePage {
   font-family: "Arial", sans-serif;
   font-size: 0.85rem;
@@ -54,8 +48,6 @@ section {
 .resumeList > li {
   margin-bottom: 0.5rem;
 }
-
-
 
 .resumeMain {
   grid-area: main-area;
@@ -129,7 +121,7 @@ section {
 }
 
 /* fix for Firefox per https://support.mozilla.org/en-US/questions/1208831 */
-@media print {
+@media only print {
   .resumePage {
     display: block !important;
   }
