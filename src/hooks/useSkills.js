@@ -9,5 +9,7 @@ const fetchSkills = async () => {
 };
 
 export function useSkills() {
-  return useQuery(["skills"], fetchSkills);
+  return useQuery(["skills"], fetchSkills, { 
+    staleTime: 10 * (60 * 1000), // 10 mins 
+  });
 }

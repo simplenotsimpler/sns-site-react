@@ -9,5 +9,7 @@ const fetchWork = async () => {
 };
 
 export function useWork() {
-  return useQuery(["work"], fetchWork);
+  return useQuery(["work"], fetchWork, { 
+    staleTime: 10 * (60 * 1000), // 10 mins 
+  });
 }

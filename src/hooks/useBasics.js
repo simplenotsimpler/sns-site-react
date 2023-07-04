@@ -9,5 +9,7 @@ const fetchBasics = async () => {
 };
 
 export function useBasics() {
-  return useQuery(["basics"], fetchBasics);
+  return useQuery(["basics"], fetchBasics, {
+    staleTime: 10 * (60 * 1000), // 10 mins
+  });
 }

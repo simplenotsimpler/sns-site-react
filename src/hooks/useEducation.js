@@ -9,5 +9,7 @@ const fetchEducation = async () => {
 };
 
 export function useEducation() {
-  return useQuery(["education"], fetchEducation);
+  return useQuery(["education"], fetchEducation, { 
+    staleTime: 10 * (60 * 1000), // 10 mins 
+  });
 }

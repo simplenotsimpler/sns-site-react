@@ -9,5 +9,7 @@ const fetchProjects = async () => {
 };
 
 export function useProjects() {
-  return useQuery(["projects"], fetchProjects);
+  return useQuery(["projects"], fetchProjects, { 
+    staleTime: 10 * (60 * 1000), // 10 mins 
+  });
 }
