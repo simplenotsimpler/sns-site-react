@@ -3,15 +3,12 @@
   display: grid;
   grid-template-columns: 0.5fr 0.5fr;
   gap: 1.75rem;
-
-  background-color: antiquewhite;
 }
 
 .contactLink {
   font-size: 1.375rem;
   line-height: 127%;
   color: inherit;
-  background-color: pink;
 }
 
 .contactItem {
