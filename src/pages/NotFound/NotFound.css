@@ -1,0 +1,16 @@
+.notFound {
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.notFound > h1 {
+  font-size: 2.5rem;
+}
+
+.notFound > a {
+  color: inherit;
+  font-size: 2rem;
+}
