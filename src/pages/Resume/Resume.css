@@ -127,3 +127,10 @@ section {
     padding: 1rem;
   }
 }
+
+/* fix for Firefox per https://support.mozilla.org/en-US/questions/1208831 */
+@media print {
+  .resumePage {
+    display: block !important;
+  }
+}
