@@ -10,22 +10,24 @@ const Highlight = ({ highlight }) => {
 
 const Position = ({ position }) => {
   return (
-    <article>
-      <header className="positionHeader">
-        <p className="positionTitle">{position.position}</p>
-        <p className="positionDate">
-          {formatWorkDate(position.startDate)} -{" "}
-          {formatWorkDate(position.endDate)}
-        </p>
-        <p className="positionCompany">{position.company}</p>
-        <p className="positionLocation">{position.location}</p>
-      </header>
-      <ul className="positionDescription resumeList">
-        {position.highlights.map((highlight, index) => {
-          return <Highlight key={index} highlight={highlight} />;
-        })}
-      </ul>
-    </article>
+    <li>
+      <article>
+        <header className="positionHeader">
+          <p className="positionTitle">{position.position}</p>
+          <p className="positionDate">
+            {formatWorkDate(position.startDate)} -{" "}
+            {formatWorkDate(position.endDate)}
+          </p>
+          <p className="positionCompany">{position.company}</p>
+          <p className="positionLocation">{position.location}</p>
+        </header>
+        <ul className="positionDescription resumeList">
+          {position.highlights.map((highlight, index) => {
+            return <Highlight key={index} highlight={highlight} />;
+          })}
+        </ul>
+      </article>
+    </li>
   );
 };
 
@@ -42,9 +44,11 @@ const Positions = () => {
 
   return (
     <>
-      {positions.map((position, index) => {
-        return <Position position={position} key={index} />;
-      })}
+      <ul className="positionsList">
+        {positions.map((position, index) => {
+          return <Position position={position} key={index} />;
+        })}
+      </ul>
     </>
   );
 };
