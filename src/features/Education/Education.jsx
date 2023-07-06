@@ -6,21 +6,25 @@ import { useEducation } from "../../hooks/useEducation.js";
 
 const EducationItem = ({ education }) => {
   return (
-    <article className="resumeEducationItem">
-      <header className="institutionHeader">
-        <p className="resumeDegree">
-          {education.studyType && `${education.studyType}, `}
-          {education.area}
-        </p>
+    <li>
+      <article className="resumeEducationItem">
+        <header className="institutionHeader">
+          <p className="resumeDegree">
+            {education.studyType && `${education.studyType}, `}
+            {education.area}
+          </p>
 
-        <p className="resumeDegreeDate">
-          {formatYear(education.startDate)} - {formatYear(education.endDate)}
+          <p className="resumeDegreeDate">
+            {formatYear(education.startDate)} - {formatYear(education.endDate)}
+          </p>
+          <p className="resumeDegreeInstitution">{education.institution}</p>
+          <p className="resumeDegreeLocation">{education.location}</p>
+        </header>
+        <p className="resumeDegreeGrade">
+          Grade: {`${education.score} / 4.000`}
         </p>
-        <p className="resumeDegreeInstitution">{education.institution}</p>
-        <p className="resumeDegreeLocation">{education.location}</p>
-      </header>
-      <p className="resumeDegreeGrade">Grade: {`${education.score} / 4.000`}</p>
-    </article>
+      </article>
+    </li>
   );
 };
 
@@ -36,9 +40,11 @@ const Education = () => {
   }
   return (
     <>
-      {education.map((education, index) => {
-        return <EducationItem education={education} key={index} />;
-      })}
+      <ul className="educationList">
+        {education.map((education, index) => {
+          return <EducationItem education={education} key={index} />;
+        })}
+      </ul>
     </>
   );
 };
