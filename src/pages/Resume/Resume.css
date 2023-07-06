@@ -22,8 +22,7 @@ section {
   font-family: "Arial", sans-serif;
   font-size: 0.85rem;
   color: black;
-  /* padding: 1.25rem; */
-  /* margin: 1in; */
+
   display: grid;
   grid-template-columns: 0.5fr 1fr 0.5fr;
   grid-template-areas:
@@ -75,6 +74,7 @@ section {
   text-transform: uppercase;
   border-bottom: 1px solid;
   margin-bottom: 1rem;
+  break-after: avoid;
 }
 
 .resumeProjects {
@@ -86,17 +86,18 @@ section {
   grid-area: skills-area;
 }
 
-/* goes to top of page otherwise in print preview */
-/* @media print {
-  .resumeSkills {
-    margin-top: 1in;
-  }
-} */
-
 .resumeEducation {
   grid-area: education-area;
 }
 
+/* 
+  Note on page breaks:
+  - have not figured out how to get this to stay on page w/ skills & education  
+  - had tried break-inside: auto; before fixed semantic for education & work sections
+  - however, that had only worked in Chrome, not Firefox
+  - this is why work is completely on third page
+  - should not make too much of a difference since most places I apply to will be receiving a Word version that I have uploaded
+  */
 .resumeWork {
   grid-area: work-area;
 }
