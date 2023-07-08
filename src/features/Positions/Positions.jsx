@@ -1,6 +1,6 @@
 import "./Positions.css";
 //data stuff
-import { useWork } from "../../hooks/useWork.js";
+import { usePositions } from "../../hooks/usePositions.js";
 
 import { formatWorkDate } from "../../helpers.js";
 
@@ -32,7 +32,7 @@ const Position = ({ position }) => {
 };
 
 const Positions = () => {
-  const { data: positions, isLoading, isError } = useWork();
+  const { data: positions, isLoading, isError } = usePositions();
 
   if (isError) {
     return <h1> Sorry, there was an error </h1>;
