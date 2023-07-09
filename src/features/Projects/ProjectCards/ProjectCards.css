@@ -1,4 +1,4 @@
-.projectCardsContainer{
+.projectCardsContainer {
   display: grid;
   justify-content: center;
   align-items: center;
@@ -88,7 +88,7 @@
 
 /* this keeps it max 3 cols on larger screens & stays w/i margins with rest of screen sizes */
 @media only screen and (min-width: 1280px) {
-  .projectCards {
+  .projectCardsContainer {
     grid-template-columns: repeat(3, var(--width-column));
   }
 }
