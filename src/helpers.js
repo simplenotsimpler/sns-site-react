@@ -19,7 +19,11 @@ export function formatYear(stringDate) {
 
 export function formatWorkDate(stringDate) {
   //try convert to date object
-  const workDate = new Date(stringDate);
+  // const workDate = new Date(stringDate);
+  //add midnight to force to UTC always so don't have off by one day bug
+  // https://medium.com/fredwong-it/js-datetime-bug-auto-set-back-one-day-53d5d5e3903b
+  // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
+  const workDate = new Date(`${stringDate} 00:00:00`);
 
   //check if not a date, e.g. 'Present'
   if (isNaN(workDate)) {
