@@ -13,6 +13,7 @@ import {
   faCodeBranch,
   faGlobe,
   faFile,
+  faUserGear,
 } from "@fortawesome/free-solid-svg-icons";
 
 //probably can combine this into one component w/ SkillIcon
@@ -39,6 +40,8 @@ const FaIcon = ({ icon, ...props }) => {
       return <FontAwesomeIcon icon={faGlobe} {...props} />;
     case "File":
       return <FontAwesomeIcon icon={faFile} {...props} />;
+    case "UserGear":
+      return <FontAwesomeIcon icon={faUserGear} {...props} />;
     default:
       break;
   }
