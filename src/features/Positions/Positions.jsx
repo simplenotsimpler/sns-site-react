@@ -11,7 +11,7 @@ const Highlight = ({ highlight }) => {
 const Position = ({ position }) => {
   return (
     <li>
-      <article>
+      <article className="positionItem">
         <header className="positionHeader">
           <p className="positionTitle">{position.position}</p>
           <p className="positionDate">

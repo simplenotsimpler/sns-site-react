@@ -18,6 +18,10 @@ li,
 section {
   break-inside: avoid-page;
 } */
+
+[class$="Item"] {
+  break-inside: avoid-page;
+}
 .resumePage {
   font-family: "Arial", sans-serif;
   font-size: 0.85rem;
@@ -64,7 +68,7 @@ section {
 }
 .resumeSection {
   width: 100%;
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
 }
 
 .resumeSectionHeading {
