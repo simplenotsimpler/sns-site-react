@@ -41,6 +41,7 @@ section {
 
 .resumePage a {
   color: inherit;
+  text-underline-offset: 3px;
 }
 
 .resumeList {
@@ -78,6 +79,7 @@ section {
   text-transform: uppercase;
   /* border-bottom: 1px solid; */
   text-decoration: underline;
+  text-underline-offset: 3px;
   margin-bottom: 1rem;
   break-after: avoid;
 }
@@ -130,5 +132,8 @@ section {
 @media only print {
   .resumePage {
     display: block !important;
+    background-color: white;
+    color: black;
+    padding: 0 0.5rem;
   }
 }
