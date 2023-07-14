@@ -22,37 +22,32 @@ const ResumeHeader = ({ basics }) => {
         </span>
       </p>
       <p className="resumeHeaderLinks">
-        <span>
-          <Link
-            to={GitHubProfile.url}
-            target="_blank"
-            rel="noreferrer noopener"
-            className="resumeGitHub"
-          >
-            {cleanUri(GitHubProfile.url)}
-          </Link>
-        </span>
-        <span>
-          <Link
-            to={LinkedInProfile.url}
-            target="_blank"
-            rel="noreferrer noopener"
-            className="resumeLinkedIn"
-          >
-            {cleanUri(LinkedInProfile.url)}
-          </Link>
-        </span>
+        <Link
+          to={GitHubProfile.url}
+          target="_blank"
+          rel="noreferrer noopener"
+          className="resumeGitHub"
+        >
+          {cleanUri(GitHubProfile.url)}
+        </Link>
 
-        <span>
-          <Link
-            to={basics.website}
-            target="_blank"
-            rel="noreferrer noopener"
-            className="resumeWebsite"
-          >
-            {cleanUri(basics.website)}
-          </Link>
-        </span>
+        <Link
+          to={LinkedInProfile.url}
+          target="_blank"
+          rel="noreferrer noopener"
+          className="resumeLinkedIn"
+        >
+          {cleanUri(LinkedInProfile.url)}
+        </Link>
+
+        <Link
+          to={basics.website}
+          target="_blank"
+          rel="noreferrer noopener"
+          className="resumeWebsite"
+        >
+          {cleanUri(basics.website)}
+        </Link>
       </p>
     </header>
   );

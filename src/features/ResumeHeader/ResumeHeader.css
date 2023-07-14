@@ -1,5 +1,4 @@
 .resumeHeader {
-  /* border-bottom: 1px solid; */
   margin-bottom: 1rem;
   justify-items: center;
   grid-area: header-area;
@@ -16,13 +15,9 @@
   row-gap: inherit;
 }
 
-/* .resumeHeader > * {
-  margin-bottom: 0.5rem;
-} */
-
 .resumeTitle {
   grid-area: resume-title;
-  /* justify-self: center; */
+
   font-size: 1.25rem;
   text-transform: uppercase;
   font-weight: 700;
@@ -36,43 +31,34 @@
 
 .resumeHeaderLinks {
   grid-area: resume-header-links;
+
+  display: grid;
+  grid-template-columns: inherit;
+  grid-template-areas: "github linked-in website";
 }
 
 .resumeHeaderContact > span,
-.resumeHeaderLinks > span {
+.resumeHeaderLinks > a {
   margin: 0;
   padding: 0 0.25rem;
   border-right: 1px solid;
 }
 
 .resumeHeaderContact > span:last-child,
-.resumeHeaderLinks > span:last-child {
+.resumeHeaderLinks > a:last-child {
   border-right: none;
 }
-/* .resumeLocation {
-  grid-area: location;
-  justify-self: start;
-}
 
-.resumePhone {
-  grid-area: phone;
-  justify-self: center;
+.resumeGitHub {
+  grid-area: github;
 }
-
-.resumeEmail {
-  grid-area: email;
-  justify-self: end;
-}
-
 .resumeLinkedIn {
   grid-area: linked-in;
-  justify-self: start;
 }
 
 .resumeWebsite {
   grid-area: website;
-  justify-self: end;
-} */
+}
 
 @media only screen and (max-width: 700px) {
   .resumeLocation,
@@ -83,18 +69,27 @@
     justify-self: unset;
   }
 
-  /* TODO: fix header responsive */
-  /* .resumeHeader {
+  .resumeHeader {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     grid-template-areas:
       "resume-title"
-      "location"
-      "phone"
-      "email"
-      "linked-in "
-      " website";
+      "resume-header-contact"
+      "resume-header-links";
+  }
 
-    justify-items: center;
-  } */
+  .resumeHeaderLinks {
+    grid-template-columns: repeat(auto-fill, min-content);
+    grid-template-areas:
+      "github linked-in"
+      "website website";
+  }
+
+  .resumeLinkedIn {
+    border-right: none !important;
+  }
+
+  .resumeWebsite {
+    justify-self: center;
+  }
 }
