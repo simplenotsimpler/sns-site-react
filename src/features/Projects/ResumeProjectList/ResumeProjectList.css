@@ -6,9 +6,24 @@
 .resumeProjectItem > * {
   margin-bottom: 0.5rem;
 }
+
+.resumeProjectHeader {
+  display: grid;
+  grid-template-columns: inherit;
+  grid-template-areas: "project-title . project-date";
+  /* set row and col gaps separately */
+  column-gap: inherit;
+  row-gap: inherit;
+}
 .resumeProjectTitle {
   font-weight: 700;
   text-transform: uppercase;
+  grid-area: project-title;
+}
+
+.resumeProjectDate {
+  grid-area: project-date;
+  justify-self: end;
 }
 
 .resumeProjectLinkTitle {

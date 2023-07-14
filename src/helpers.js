@@ -1,3 +1,5 @@
+import { parseISO } from "date-fns";
+
 //this is useful if you need the website w/o www
 export const cleanUri = (stringUri) => {
   const url = new URL(stringUri);
@@ -23,7 +25,11 @@ export function formatWorkDate(stringDate) {
   //add midnight to force to UTC always so don't have off by one day bug
   // https://medium.com/fredwong-it/js-datetime-bug-auto-set-back-one-day-53d5d5e3903b
   // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
-  const workDate = new Date(`${stringDate} 00:00:00`);
+  // const workDate = new Date(`${stringDate} 00:00:00`);
+
+  //use parseISO instead so works w/ GitHub dates which have the time on them already
+  // https://stackoverflow.com/questions/48172772/time-zone-issue-involving-date-fns-format
+  const workDate = parseISO(stringDate);
 
   //check if not a date, e.g. 'Present'
   if (isNaN(workDate)) {

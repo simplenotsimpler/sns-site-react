@@ -1,12 +1,18 @@
 import "./ResumeProjectList.css";
 import { Link } from "react-router-dom";
-import { cleanUri } from "../../../helpers.js";
+import { cleanUri, formatWorkDate } from "../../../helpers.js";
 
 const ResumeProject = ({ project }) => {
   return (
     <li>
       <article className="resumeProjectItem">
-        <h3 className="resumeProjectTitle">{project.name}</h3>
+        <header className="resumeProjectHeader">
+          <h3 className="resumeProjectTitle">{project.name}</h3>
+          <p className="resumeProjectDate">
+            {formatWorkDate(project.createdAt)} -{" "}
+            {formatWorkDate(project.pushedAt)}
+          </p>
+        </header>
         <p className="resumeProjectDescription">{project.description}</p>
         <ul className="resumeProjectLinks resumeList">
           <li>
