@@ -131,9 +131,15 @@ section {
 /* fix for Firefox per https://support.mozilla.org/en-US/questions/1208831 */
 @media only print {
   .resumePage {
+    font-family: Calibri, Helvetica, Verdana;
     display: block !important;
     background-color: white;
     color: black;
     padding: 0 0.5rem;
+  }
+
+  .resumePage a {
+    color: inherit;
+    text-decoration: none;
   }
 }
