@@ -12,13 +12,13 @@ const ResumeHeader = ({ basics }) => {
       <h1 className="resumeTitle">{basics.name}</h1>
       <p className="resumeHeaderContact">
         <span className="resumePhone">{basics.phone}</span>
-        <span className="resumeLocation">
-          {basics.location.city}, {basics.location.region}
-        </span>
         <span>
           <Link to={`mailto:${basics.email}`} className="resumeEmail">
             {basics.email}
           </Link>
+        </span>
+        <span className="resumeLocation">
+          {basics.location.city}, {basics.location.region}
         </span>
       </p>
       <p className="resumeHeaderLinks">
