@@ -43,22 +43,9 @@ const ResumeProject = ({ project }) => {
   );
 };
 
-const ResumeProjectList = ({ projects, githubLink }) => {
+const ResumeProjectList = ({ projects }) => {
   return (
     <>
-      <p className="githubLink">
-        <span className="resumeProjectLinkTitle">GitHub: </span>
-        <a
-          href={githubLink}
-          target="_blank"
-          rel="noreferrer noopener"
-          className="resumeProjectLink"
-        >
-          {cleanUri(githubLink)}
-        </a>
-        {/* not sure if want this as small as 9pt equivalent */}
-        &nbsp;(for additional details and projects)
-      </p>
       <ul>
         {projects.map((project, index) => {
           return <ResumeProject project={project} key={index} />;

@@ -54,11 +54,8 @@ const Resume = () => {
         </section>
         <section className="resumeSection resumeProjects">
           <h2 className="resumeSectionHeading">Projects</h2>
-
-          <Projects forResume={true} githubLink={GitHubProfile.url} />
+          <Projects forResume={true} />
         </section>
-
-        
       </main>
     </div>
   );

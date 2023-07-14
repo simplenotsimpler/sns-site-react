@@ -1,28 +1,27 @@
 .resumeHeader {
   /* border-bottom: 1px solid; */
   margin-bottom: 1rem;
-
+  justify-items: center;
   grid-area: header-area;
   display: grid;
   grid-template-columns: inherit;
   grid-template-rows: auto;
   grid-template-areas:
     "resume-title resume-title resume-title"
-    "location phone email"
-    "linked-in . website";
+    "resume-header-details resume-header-details resume-header-details";
 
   /* set row and col gaps separately */
   column-gap: inherit;
   row-gap: inherit;
 }
 
-.resumeHeader > * {
+/* .resumeHeader > * {
   margin-bottom: 0.5rem;
-}
+} */
 
 .resumeTitle {
   grid-area: resume-title;
-  justify-self: center;
+  /* justify-self: center; */
   font-size: 1.25rem;
   text-transform: uppercase;
   font-weight: 700;
@@ -30,7 +29,19 @@
   letter-spacing: 0.93px;
 }
 
-.resumeLocation {
+.resumeHeaderDetails {
+  grid-area: resume-header-details;
+}
+.resumeHeaderDetails > span {
+  margin: 0;
+  padding: 0 0.25rem;
+  border-right: 1px solid;
+}
+
+.resumeHeaderDetails > span:last-child {
+  border-right: none;
+}
+/* .resumeLocation {
   grid-area: location;
   justify-self: start;
 }
@@ -53,7 +64,7 @@
 .resumeWebsite {
   grid-area: website;
   justify-self: end;
-}
+} */
 
 @media only screen and (max-width: 700px) {
   .resumeLocation,
@@ -63,7 +74,7 @@
   .resumeWebsite {
     justify-self: unset;
   }
-  .resumeHeader {
+  /* .resumeHeader {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     grid-template-areas:
@@ -75,5 +86,5 @@
       " website";
 
     justify-items: center;
-  }
+  } */
 }

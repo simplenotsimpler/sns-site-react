@@ -5,7 +5,7 @@ import { useProjects } from "../../hooks/useProjects.js";
 import ResumeProjectList from "./ResumeProjectList/ResumeProjectList.jsx";
 
 // forResume flag - so can return a project list for the resume instead of cards
-const Projects = ({ forResume = false, githubLink = null }) => {
+const Projects = ({ forResume = false }) => {
   const { data: projects, isLoading, isError } = useProjects();
 
   if (isError) {
@@ -21,7 +21,7 @@ const Projects = ({ forResume = false, githubLink = null }) => {
       <ResumeProjectList
         projects={projects}
         forResume={true}
-        githubLink={githubLink}
+        
       />
     );
   }
