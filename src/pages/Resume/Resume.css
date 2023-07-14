@@ -53,10 +53,10 @@ section {
   display: grid;
   grid-template-columns: inherit;
   grid-template-areas:
-    "projects-area projects-area projects-area"
     "skills-area skills-area skills-area"
     "education-area education-area education-area"
-    "work-area work-area work-area";
+    "work-area work-area work-area"
+    "projects-area projects-area projects-area";
 
   /* set row and col gaps separately */
   column-gap: inherit;

@@ -40,11 +40,6 @@ const Resume = () => {
       <ResumeHeader basics={basics} />
 
       <main className="resumeMain">
-        <section className="resumeSection resumeProjects">
-          <h2 className="resumeSectionHeading">Projects</h2>
-
-          <Projects forResume={true} githubLink={GitHubProfile.url} />
-        </section>
         <section className="resumeSection resumeSkills">
           <h2 className="resumeSectionHeading">Skills</h2>
           <Skills forResume={true} />
@@ -57,6 +52,13 @@ const Resume = () => {
           <h2 className="resumeSectionHeading">Relevant Work</h2>
           <Positions />
         </section>
+        <section className="resumeSection resumeProjects">
+          <h2 className="resumeSectionHeading">Projects</h2>
+
+          <Projects forResume={true} githubLink={GitHubProfile.url} />
+        </section>
+
+        
       </main>
     </div>
   );
