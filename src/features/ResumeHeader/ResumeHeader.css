@@ -8,7 +8,8 @@
   grid-template-rows: auto;
   grid-template-areas:
     "resume-title resume-title resume-title"
-    "resume-header-details resume-header-details resume-header-details";
+    "resume-header-contact resume-header-contact resume-header-contact"
+    "resume-header-links resume-header-links resume-header-links";
 
   /* set row and col gaps separately */
   column-gap: inherit;
@@ -29,16 +30,23 @@
   letter-spacing: 0.93px;
 }
 
-.resumeHeaderDetails {
-  grid-area: resume-header-details;
+.resumeHeaderContact {
+  grid-area: resume-header-contact;
 }
-.resumeHeaderDetails > span {
+
+.resumeHeaderLinks {
+  grid-area: resume-header-links;
+}
+
+.resumeHeaderContact > span,
+.resumeHeaderLinks > span {
   margin: 0;
   padding: 0 0.25rem;
   border-right: 1px solid;
 }
 
-.resumeHeaderDetails > span:last-child {
+.resumeHeaderContact > span:last-child,
+.resumeHeaderLinks > span:last-child {
   border-right: none;
 }
 /* .resumeLocation {
@@ -74,6 +82,8 @@
   .resumeWebsite {
     justify-self: unset;
   }
+
+  /* TODO: fix header responsive */
   /* .resumeHeader {
     grid-template-columns: 1fr;
     grid-template-rows: auto;

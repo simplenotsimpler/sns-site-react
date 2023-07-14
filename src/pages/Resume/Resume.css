@@ -5,7 +5,7 @@
 /* TODO: phase 2: print to Word and/or PDF */
 
 /* only need to add page breaks. other tags reset via index.css */
-h1,
+/* h1,
 h2,
 h3,
 h4,
@@ -17,7 +17,7 @@ ul,
 li,
 section {
   break-inside: avoid-page;
-}
+} */
 .resumePage {
   font-family: "Arial", sans-serif;
   font-size: 0.85rem;
@@ -80,7 +80,7 @@ section {
 
 .resumeProjects {
   grid-area: projects-area;
-  break-after: page;
+  /* break-after: page; */
 }
 
 .resumeSkills {

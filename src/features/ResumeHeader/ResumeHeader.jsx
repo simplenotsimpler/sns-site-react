@@ -10,7 +10,7 @@ const ResumeHeader = ({ basics }) => {
   return (
     <header className="resumeHeader">
       <h1 className="resumeTitle">{basics.name}</h1>
-      <p className="resumeHeaderDetails">
+      <p className="resumeHeaderContact">
         <span className="resumePhone">{basics.phone}</span>
         <span className="resumeLocation">
           {basics.location.city}, {basics.location.region}
@@ -20,6 +20,8 @@ const ResumeHeader = ({ basics }) => {
             {basics.email}
           </Link>
         </span>
+      </p>
+      <p className="resumeHeaderLinks">
         <span>
           <Link
             to={GitHubProfile.url}
