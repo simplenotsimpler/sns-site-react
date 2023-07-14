@@ -1,5 +1,5 @@
 .resumeHeader {
-  border-bottom: 1px solid;
+  /* border-bottom: 1px solid; */
   margin-bottom: 1rem;
 
   grid-area: header-area;

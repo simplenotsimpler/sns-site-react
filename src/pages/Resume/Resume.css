@@ -69,10 +69,11 @@ section {
 
 .resumeSectionHeading {
   font-weight: 700;
-  line-height: 143%;
-  letter-spacing: 5.2px;
+  /* line-height: 143%;
+  letter-spacing: 5.2px; */
   text-transform: uppercase;
-  border-bottom: 1px solid;
+  /* border-bottom: 1px solid; */
+  text-decoration: underline;
   margin-bottom: 1rem;
   break-after: avoid;
 }
