@@ -67,6 +67,20 @@ section {
   column-gap: inherit;
   row-gap: inherit;
 }
+
+.resumeMainIT {
+  grid-area: main-area;
+  display: grid;
+  grid-template-columns: inherit;
+  grid-template-areas:
+    "work-area work-area work-area"
+    "education-area education-area education-area"
+    "skills-area skills-area skills-area";
+
+  /* set row and col gaps separately */
+  column-gap: inherit;
+  row-gap: inherit;
+}
 .resumeSection {
   width: 100%;
   /* margin-bottom: 1rem; */

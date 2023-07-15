@@ -46,7 +46,29 @@ const ProjectsSection = () => {
     </section>
   );
 };
-const Resume = () => {
+
+const ResumeMain = () => {
+  return (
+    <main className="resumeMain">
+      <SkillsSection />
+      <EducationSection />
+      <PostionsSection />
+      <ProjectsSection />
+    </main>
+  );
+};
+
+const ResumeForITMain = () => {
+  return (
+    <main className="resumeMainIT">
+      <PostionsSection forIT={true} />
+      <EducationSection />
+      <SkillsSection />
+    </main>
+  );
+};
+
+const Resume = ({ forIT = false }) => {
   const { data: basics, isLoading, isError } = useBasics();
 
   if (isError) {
@@ -70,13 +92,7 @@ const Resume = () => {
       />
 
       <ResumeHeader basics={basics} />
-
-      <main className="resumeMain">
-        <SkillsSection />
-        <EducationSection />
-        <PostionsSection />
-        <ProjectsSection />
-      </main>
+      {forIT ? <ResumeForITMain /> : <ResumeMain />}
     </div>
   );
 };

@@ -8,6 +8,7 @@ function App() {
     <Routes>
       <Route exact path="/" element={<Home />} />
       <Route exact path="/resume" element={<Resume />} />
+      <Route exact path="/resume-it" element={<Resume forIT={true} />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );
