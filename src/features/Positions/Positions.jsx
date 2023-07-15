@@ -8,6 +8,18 @@ const Highlight = ({ highlight }) => {
   return <li>{highlight}</li>;
 };
 
+const PositionSkillsUsed = ({ skills }) => {
+  return (
+    <section className="resumeSkillsUsed">
+      <h3 className="resumeSkillsUsedTitle">Skills Used:</h3>
+      <ul className="resumeSkillsUsedList">
+        {skills.map((skill, index) => (
+          <li key={index}>{skill}</li>
+        ))}
+      </ul>
+    </section>
+  );
+};
 const Position = ({ position }) => {
   return (
     <li>
@@ -21,11 +33,14 @@ const Position = ({ position }) => {
           <p className="positionCompany">{position.company}</p>
           <p className="positionLocation">{position.location}</p>
         </header>
-        <ul className="positionDescription resumeList">
-          {position.highlights.map((highlight, index) => {
-            return <Highlight key={index} highlight={highlight} />;
-          })}
-        </ul>
+        <section>
+          <ul className="positionDescription resumeList">
+            {position.highlights.map((highlight, index) => {
+              return <Highlight key={index} highlight={highlight} />;
+            })}
+          </ul>
+        </section>
+        <PositionSkillsUsed skills={position.skillsUsed} />
       </article>
     </li>
   );
