@@ -1,6 +1,10 @@
 import "./Positions.css";
 //data stuff
-import { usePositions } from "../../hooks/usePositions.js";
+// import { usePositions } from "../../hooks/usePositions.js";
+import {
+  usePositionsForResume,
+  usePositionsITForResume,
+} from "../../hooks/usePositions.js";
 
 import { formatWorkDate } from "../../helpers.js";
 
@@ -49,21 +53,29 @@ const Position = ({ position }) => {
   );
 };
 
-const Positions = () => {
-  const { data: positions, isLoading, isError } = usePositions();
+const Positions = ({ forIT = false }) => {
+  const { data: positions, isLoading, isError } = usePositionsForResume();
 
-  if (isError) {
+  const {
+    data: positionsForIT,
+    isLoading: isLoadingIT,
+    isError: isErrorIT,
+  } = usePositionsITForResume();
+
+  if (isError || isErrorIT) {
     return <h1> Sorry, there was an error </h1>;
   }
 
-  if (isLoading) {
+  if (isLoading || isLoadingIT) {
     return <h1> Loading positions...</h1>;
   }
-
+  
   return (
     <>
       <ul className="positionsList">
-        {positions.map((position, index) => {
+        {forIT ? positionsForIT.map((position, index) => {
+          return <Position position={position} key={index} />;
+        }): positions.map((position, index) => {
           return <Position position={position} key={index} />;
         })}
       </ul>
