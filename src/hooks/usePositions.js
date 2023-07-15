@@ -38,7 +38,7 @@ export function usePositionsForResume() {
 }
 
 export function usePositionsITForResume() {
-  return useQuery(["positionsForITResume"], fetchPositionsForResume, {
+  return useQuery(["positionsForITResume"], fetchPositionsForITResume, {
     staleTime: 10 * (60 * 1000), // 10 mins
   });
 }
