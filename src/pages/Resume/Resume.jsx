@@ -23,8 +23,6 @@ const Resume = () => {
     return <h1> Loading resume...</h1>;
   }
 
-  const GitHubProfile = getProfile(basics.profiles, "GitHub");
-
   return (
     <div className="resumePage">
       <SEO
