@@ -25,13 +25,16 @@ const Position = ({ position }) => {
     <li>
       <article className="positionItem">
         <header className="positionHeader">
-          <p className="positionTitle">{position.position}</p>
+          <p className="positionInfo">
+            <span className="positionTitle">{position.position}</span>,{" "}
+            <span className="positionCompany">{position.company}</span> |{" "}
+            <span className="positionLocation">{position.location}</span>
+          </p>
+
           <p className="positionDate">
             {formatWorkDate(position.startDate)} -{" "}
             {formatWorkDate(position.endDate)}
           </p>
-          <p className="positionCompany">{position.company}</p>
-          <p className="positionLocation">{position.location}</p>
         </header>
         <section>
           <ul className="positionDescription resumeList">
