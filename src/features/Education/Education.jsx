@@ -9,20 +9,21 @@ const EducationItem = ({ education }) => {
     <li>
       <article className="resumeEducationItem">
         <header className="institutionHeader">
-          <p className="resumeDegree">
-            {education.studyType && `${education.studyType}, `}
-            {education.area}
+          <p className="degreeInfo">
+            <span className="resumeDegree">
+              {education.studyType && `${education.studyType}, `}
+              {education.area}
+            </span>
+            ,{" "}
+            <span className="resumeDegreeInstitution">
+              {education.institution}
+            </span>{" "}
+            | {education.location}
           </p>
-
           <p className="resumeDegreeDate">
             {formatYear(education.startDate)} - {formatYear(education.endDate)}
           </p>
-          <p className="resumeDegreeInstitution">{education.institution}</p>
-          <p className="resumeDegreeLocation">{education.location}</p>
         </header>
-        <p className="resumeDegreeGrade">
-          Grade: {`${education.score} / 4.000`}
-        </p>
       </article>
     </li>
   );

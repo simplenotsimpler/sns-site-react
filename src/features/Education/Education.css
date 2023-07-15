@@ -5,9 +5,10 @@
 .institutionHeader {
   display: grid;
   grid-template-columns: inherit;
-  grid-template-areas:
+  grid-template-areas: "degree-info degree-info degree-date";
+  /* grid-template-areas:
     "degree . degree-date"
-    "institution . institution-location";
+    "institution . institution-location"; */
   /* set row and col gaps separately */
   column-gap: inherit;
   row-gap: inherit;
@@ -17,6 +18,9 @@
   margin-bottom: 0.5rem;
 }
 
+.degreeInfo {
+  grid-area: degree-info;
+}
 .resumeDegree {
   grid-area: degree;
   text-transform: uppercase;
@@ -30,6 +34,7 @@
 
 .resumeDegreeInstitution {
   grid-area: institution;
+  font-style: italic;
 }
 
 .resumeDegreeLocation {
