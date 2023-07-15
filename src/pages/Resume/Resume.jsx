@@ -9,9 +9,43 @@ import "../Resume/Resume.css";
 import { useBasics } from "../../hooks/useBasics.js";
 
 //helper
-import { getProfile } from "../../helpers.js";
 import SEO from "../../components/layout/SEO.jsx";
 
+const SkillsSection = () => {
+  return (
+    <section className="resumeSection resumeSkills">
+      <h2 className="resumeSectionHeading">Skills</h2>
+      <Skills forResume={true} />
+    </section>
+  );
+};
+
+const EducationSection = () => {
+  return (
+    <section className="resumeSection resumeEducation">
+      <h2 className="resumeSectionHeading">Relevant Education</h2>
+      <Education />
+    </section>
+  );
+};
+
+const PostionsSection = () => {
+  return (
+    <section className="resumeSection resumeWork">
+      <h2 className="resumeSectionHeading">Relevant Work</h2>
+      <Positions />
+    </section>
+  );
+};
+
+const ProjectsSection = () => {
+  return (
+    <section className="resumeSection resumeProjects">
+      <h2 className="resumeSectionHeading">Projects</h2>
+      <Projects forResume={true} />
+    </section>
+  );
+};
 const Resume = () => {
   const { data: basics, isLoading, isError } = useBasics();
 
@@ -38,22 +72,10 @@ const Resume = () => {
       <ResumeHeader basics={basics} />
 
       <main className="resumeMain">
-        <section className="resumeSection resumeSkills">
-          <h2 className="resumeSectionHeading">Skills</h2>
-          <Skills forResume={true} />
-        </section>
-        <section className="resumeSection resumeEducation">
-          <h2 className="resumeSectionHeading">Relevant Education</h2>
-          <Education />
-        </section>
-        <section className="resumeSection resumeWork">
-          <h2 className="resumeSectionHeading">Relevant Work</h2>
-          <Positions />
-        </section>
-        <section className="resumeSection resumeProjects">
-          <h2 className="resumeSectionHeading">Projects</h2>
-          <Projects forResume={true} />
-        </section>
+        <SkillsSection />
+        <EducationSection />
+        <PostionsSection />
+        <ProjectsSection />
       </main>
     </div>
   );
