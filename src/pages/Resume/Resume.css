@@ -137,12 +137,6 @@ section {
   }
 }
 
-@media only screen and (max-width: 972px) {
-  .resumePage {
-    padding: 1rem;
-  }
-}
-
 /* fix for Firefox per https://support.mozilla.org/en-US/questions/1208831 */
 @media only print {
   .resumePage {
