@@ -11,38 +11,11 @@ import { useBasics } from "../../hooks/useBasics.js";
 //helper
 import SEO from "../../components/layout/SEO.jsx";
 
-const SkillsSection = () => {
+const Section = ({ children, sectionClass, heading }) => {
   return (
-    <section className="resumeSection resumeSkills">
-      <h2 className="resumeSectionHeading">Skills</h2>
-      <Skills forResume={true} />
-    </section>
-  );
-};
-
-const EducationSection = () => {
-  return (
-    <section className="resumeSection resumeEducation">
-      <h2 className="resumeSectionHeading">Relevant Education</h2>
-      <Education />
-    </section>
-  );
-};
-
-const PostionsSection = () => {
-  return (
-    <section className="resumeSection resumeWork">
-      <h2 className="resumeSectionHeading">Relevant Work</h2>
-      <Positions />
-    </section>
-  );
-};
-
-const ProjectsSection = () => {
-  return (
-    <section className="resumeSection resumeProjects">
-      <h2 className="resumeSectionHeading">Projects</h2>
-      <Projects forResume={true} />
+    <section className={`resumeSection ${sectionClass}`}>
+      <h2 className="resumeSectionHeading">{heading}</h2>
+      {children}
     </section>
   );
 };
@@ -50,10 +23,19 @@ const ProjectsSection = () => {
 const ResumeMain = () => {
   return (
     <main className="resumeMain">
-      <SkillsSection />
-      <EducationSection />
-      <PostionsSection />
-      <ProjectsSection />
+      <Section sectionClass="resumeSkills" heading="Skills">
+        <Skills forResume={true} />
+      </Section>
+      <Section sectionClass="resumeEducation" heading="Relevant Education">
+        <Education />
+      </Section>
+      <Section sectionClass="resumeWork" heading="Relevant Work">
+        <Positions />
+      </Section>
+
+      <Section sectionClass="resumeProjects" heading="Projects">
+        <Projects forResume={true} />
+      </Section>
     </main>
   );
 };
@@ -61,9 +43,15 @@ const ResumeMain = () => {
 const ResumeForITMain = () => {
   return (
     <main className="resumeMainIT">
-      <PostionsSection forIT={true} />
-      <EducationSection />
-      <SkillsSection />
+      <Section sectionClass="resumeWork" heading="Relevant Work">
+        <Positions forIT={true} />
+      </Section>
+      <Section sectionClass="resumeEducation" heading="Relevant Education">
+        <Education />
+      </Section>
+      <Section sectionClass="resumeSkills" heading="Skills">
+        <Skills forResume={true} />
+      </Section>
     </main>
   );
 };
