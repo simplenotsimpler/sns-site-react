@@ -4,7 +4,10 @@ import { parseISO } from "date-fns";
 export const cleanUri = (stringUri) => {
   const url = new URL(stringUri);
   const hostName = url.hostname.replace("www.", "");
-  const pathName = url.pathname;
+
+  //remove trailing slash
+  //regex per https://stackoverflow.com/questions/37832681/remove-trailing-from-the-end-of-url
+  const pathName = url.pathname.replace(/\/+$/, "");
 
   return hostName + pathName;
 };
