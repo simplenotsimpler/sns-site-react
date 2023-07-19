@@ -9,7 +9,7 @@ import {
 import { formatWorkDate } from "../../helpers.js";
 
 const Highlight = ({ highlight }) => {
-  return <li>{highlight}</li>;
+  return <li>{highlight.detail}</li>;
 };
 
 const PositionSkillsUsed = ({ skills }) => {
@@ -69,15 +69,17 @@ const Positions = ({ forIT = false }) => {
   if (isLoading || isLoadingIT) {
     return <h1> Loading positions...</h1>;
   }
-  
+
   return (
     <>
       <ul className="positionsList">
-        {forIT ? positionsForIT.map((position, index) => {
-          return <Position position={position} key={index} />;
-        }): positions.map((position, index) => {
-          return <Position position={position} key={index} />;
-        })}
+        {forIT
+          ? positionsForIT.map((position, index) => {
+              return <Position position={position} key={index} />;
+            })
+          : positions.map((position, index) => {
+              return <Position position={position} key={index} />;
+            })}
       </ul>
     </>
   );
