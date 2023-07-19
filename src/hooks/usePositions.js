@@ -14,7 +14,16 @@ const fetchPositionsForResume = async () => {
   const positionsForResume = data.filter(
     (position) => position.showOnResume === true
   );
-  return positionsForResume;
+  const positionsFilteredHighlights = positionsForResume.map((position) => {
+    return {
+      ...position,
+      highlights: position.highlights.filter(
+        (highlight) => highlight.showOnResume === true
+      ),
+    };
+  });
+
+  return positionsFilteredHighlights;
 };
 
 const fetchPositionsForITResume = async () => {
@@ -22,7 +31,17 @@ const fetchPositionsForITResume = async () => {
   const positionsForResume = data.filter(
     (position) => position.showOnITResume === true
   );
-  return positionsForResume;
+
+  const positionsFilteredHighlights = positionsForResume.map((position) => {
+    return {
+      ...position,
+      highlights: position.highlights.filter(
+        (highlight) => highlight.showOnITResume === true
+      ),
+    };
+  });
+
+  return positionsFilteredHighlights;
 };
 
 export function usePositions() {
