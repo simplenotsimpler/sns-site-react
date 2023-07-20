@@ -104,7 +104,7 @@ section {
 }
 .resumeProjects {
   grid-area: projects-area;
-  break-inside: avoid-page;
+  /* break-inside: avoid-page; */
   /* break-after: page; */
 }
 

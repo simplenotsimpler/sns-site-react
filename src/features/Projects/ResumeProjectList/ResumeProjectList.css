@@ -29,3 +29,10 @@
 .resumeProjectLinkTitle {
   font-weight: 700;
 }
+
+.resumeProjectLinks {
+  list-style: none;
+  padding-left: 1rem;
+  display: flex;
+  gap: 1rem;
+}

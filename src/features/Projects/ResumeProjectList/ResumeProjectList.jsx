@@ -14,7 +14,7 @@ const ResumeProject = ({ project }) => {
           </p>
         </header>
         <p className="resumeProjectDescription">{project.description}</p>
-        <ul className="resumeProjectLinks resumeList">
+        <ul className="resumeProjectLinks">
           <li>
             <span className="resumeProjectLinkTitle">GitHub: </span>
             <Link
