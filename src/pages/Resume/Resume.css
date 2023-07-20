@@ -58,6 +58,7 @@ section {
   display: grid;
   grid-template-columns: inherit;
   grid-template-areas:
+    "profile-area profile-area profile-area"
     "skills-area skills-area skills-area"
     "education-area education-area education-area"
     "work-area work-area work-area"
@@ -98,6 +99,9 @@ section {
   break-after: avoid;
 }
 
+.resumeProfile {
+  grid-area: profile-area;
+}
 .resumeProjects {
   grid-area: projects-area;
   break-inside: avoid-page;

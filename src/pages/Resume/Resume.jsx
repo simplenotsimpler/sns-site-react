@@ -3,6 +3,7 @@ import Positions from "../../features/Positions/Positions.jsx";
 import Projects from "../../features/Projects/Projects.jsx";
 import ResumeHeader from "../../features/ResumeHeader/ResumeHeader.jsx";
 import Skills from "../../features/Skills/Skills.jsx";
+import ProfessionalProfile from "../../features/ProfessionalProfile/ProfessionalProfile.jsx";
 import "../Resume/Resume.css";
 
 //data stuff
@@ -20,9 +21,12 @@ const Section = ({ children, sectionClass, heading }) => {
   );
 };
 
-const ResumeMain = () => {
+const ResumeMain = ({ basics }) => {
   return (
     <main className="resumeMain">
+      <Section sectionClass="resumeProfile" heading="Professional Profile">
+        <ProfessionalProfile professionalProfile={basics.professionalProfile} />
+      </Section>
       <Section sectionClass="resumeSkills" heading="Skills">
         <Skills forResume={true} />
       </Section>
@@ -80,7 +84,7 @@ const Resume = ({ forIT = false }) => {
       />
 
       <ResumeHeader basics={basics} />
-      {forIT ? <ResumeForITMain /> : <ResumeMain />}
+      {forIT ? <ResumeForITMain /> : <ResumeMain basics={basics} />}
     </div>
   );
 };
