@@ -1,6 +1,6 @@
 # SNS React Site
 
-Updated design and converted [previous portfolio site](https://github.com/simplenotsimpler/github-portfolio-simplified) to a React-based front-end with a separate [Express proxy API backend](https://github.com/simplenotsimpler/sns-site-react-backend).
+Updated design and converted [previous portfolio site](https://github.com/simplenotsimpler/github-portfolio-simplified) to a React-based front-end with a separate [Node.js/Express.js proxy API backend](https://github.com/simplenotsimpler/sns-site-react-backend).
 
 ## Live Site:
 
