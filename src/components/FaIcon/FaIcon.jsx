@@ -14,10 +14,13 @@ import {
   faGlobe,
   faFile,
   faUserGear,
+  faScrewdriverWrench,
+  faServer,
+  faComputer,
 } from "@fortawesome/free-solid-svg-icons";
 
 //probably can combine this into one component w/ SkillIcon
-
+//future enhancement? - store the fa icon name directly in db
 const FaIcon = ({ icon, ...props }) => {
   switch (icon) {
     case "Envelope":
@@ -42,6 +45,13 @@ const FaIcon = ({ icon, ...props }) => {
       return <FontAwesomeIcon icon={faFile} {...props} />;
     case "UserGear":
       return <FontAwesomeIcon icon={faUserGear} {...props} />;
+    case "ScrewdriverWrench":
+      return <FontAwesomeIcon icon={faScrewdriverWrench} {...props} />;
+    case "Server":
+      return <FontAwesomeIcon icon={faServer} {...props} />;
+    case "Computer":
+      return <FontAwesomeIcon icon={faComputer} {...props} />;
+
     default:
       break;
   }
