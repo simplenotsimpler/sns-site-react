@@ -52,9 +52,9 @@
   cursor: pointer;
 }
 
-.navItem > .active {
+/* .navItem > .active {
   border-bottom: 2px solid var(--color-primary);
-}
+} */
 
 .navMenuLink {
   text-decoration: none;

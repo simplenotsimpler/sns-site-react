@@ -5,12 +5,20 @@ import { useState } from "react";
 
 import "./NavHeader.css";
 
+/* 
+  Removed nav active class for now.
+  Initially the activeClass worked in both FF & Chrome.
+  However, in Chrome, active state not changing to true in Projects section. Still works fine in FF.
+  Rrelated bug report:
+  https://github.com/fisshy/react-scroll/issues/551
+
+  If time later, could manually implement Intersection Observer API or react-intersection-observer package, e.g.
+  https://blog.logrocket.com/using-react-intersection-observer-create-dynamic-header/
+*/
 function CustomLink({ to, children, ...props }) {
   return (
     <li className="navItem">
-      <ReactScrollLink activeClass="active" to={to}>
-        {children}
-      </ReactScrollLink>
+      <ReactScrollLink to={to}>{children}</ReactScrollLink>
     </li>
   );
 }
