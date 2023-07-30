@@ -17,8 +17,8 @@ const HeroContent = ({ intro, summary }) => {
           in creating responsive, user-friendly, accessible applications. I
           created this site to showcase my personal, academic, and professional
           projects. Please feel free to check out my{" "}
-          <Link to="#projects" className="heroLink">
-            projects
+          <Link to="#portfolio" className="heroLink">
+            portfolio
           </Link>
           .
         </p>
