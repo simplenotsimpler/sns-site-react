@@ -1,6 +1,7 @@
 import { LinkButton } from "../../../components/Button/Button.jsx";
 import "./HeroContent.css";
 import { Link } from "react-router-dom";
+import ReactScrollLink from "../../../components/ReactScrollLink.jsx";
 
 //TODO: get summary content from db
 //TODO: cta text
@@ -12,13 +13,15 @@ const HeroContent = ({ intro, summary }) => {
       </div>
       <div className="summary">
         <p>
-          I’m a software developer located in Beech Grove, Indiana. I specialize
-          in creating responsive, user-friendly, accessible applications. I
-          created this site to showcase my personal, academic, and professional
-          projects. Please feel free to check out my{" "}
-          <Link to="#portfolio" className="heroLink">
+          I’m a software developer specializing in creating responsive,
+          user-friendly, accessible applications. I have a solid background in
+          responsive web design (HTML, CSS, JavaScript), Visual Basic for
+          Applications (VBA), and PowerShell. I created this site to showcase my
+          personal, academic, and professional projects. Please feel free to
+          check out my{" "}
+          <ReactScrollLink to="portfolio" className="heroLink">
             portfolio
-          </Link>
+          </ReactScrollLink>
           .
         </p>
         <p>
@@ -33,9 +36,9 @@ const HeroContent = ({ intro, summary }) => {
           17 years of experience providing exceptional technical support and
           customer service, including 7 years of experience providing deskside
           and system admin support. Please feel free to browse my{" "}
-          <Link to="#skills" className="heroLink">
+          <ReactScrollLink to="skills" className="heroLink">
             skills
-          </Link>{" "}
+          </ReactScrollLink>{" "}
           and{" "}
           <Link
             to="https://simplenotsimpler.com/resume"
@@ -45,8 +48,25 @@ const HeroContent = ({ intro, summary }) => {
           >
             resume
           </Link>
+          .
         </p>
+        <div className="cta">
+          <h2 className="ctaHeader">Let's Connect!!!</h2>
+          <p className="ctaText">
+            Want to discuss a website or Office application project? Please feel
+            free to email me at{" "}
+            <Link to="mailto:contact@simplenotsimpler.com" className="heroLink">
+              contact@simplenotsimpler.com
+            </Link>{" "}
+            or drop me a line via one of my other{" "}
+            <ReactScrollLink to="contact" className="heroLink">
+              contact
+            </ReactScrollLink>{" "}
+            methods.{" "}
+          </p>
+        </div>
       </div>
+
       {/* <p className="summary">{summary}</p> */}
       {/* <LinkButton to="#contact">Let's Connect</LinkButton> */}
     </div>

@@ -16,6 +16,7 @@ function CustomLink({ to, children, ...props }) {
   );
 }
 
+//TODO: fix Simple Not Simpler link
 const NavHeader = () => {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
 

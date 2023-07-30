@@ -27,7 +27,6 @@ const Home = () => {
 
   return (
     <>
-      
       <SEO
         title={`${basics.siteName} | Portfolio`}
         description={basics.summary}
@@ -40,11 +39,11 @@ const Home = () => {
       <NavHeader />
       <main className="container">
         <section id="about" className="homeSection">
+          <h1 className="sectionTitle">About</h1>
           <About />
         </section>
         <section id="portfolio" className="homeSection">
           <h1 className="sectionTitle">Portfolio</h1>
-
           <Projects />
         </section>
         <section id="skills" className="homeSection">

@@ -12,6 +12,11 @@
 
 .heroLink {
   color: var(--color-primary);
+  text-decoration: underline;
+}
+
+.heroLink:hover {
+  cursor: pointer;
 }
 
 /* animation per https://blog.hubspot.com/website/typing-animation-css */
@@ -53,7 +58,6 @@
 
 .summary {
   font-weight: 400;
-  /* font-size: 1.75rem; */
   font-size: 1.25rem;
   line-height: 121%;
   margin-left: 50px;
@@ -65,6 +69,16 @@
 
 .heroContent > a {
   align-self: center;
+}
+
+.cta {
+  font-size: 1.125rem;
+  margin-left: 125px;
+}
+.ctaHeader {
+  color: var(--color-primary);
+  font-size: 1.375rem;
+  margin-bottom: 0.5rem;
 }
 
 @media only screen and (max-width: 700px) {
