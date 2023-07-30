@@ -3,9 +3,7 @@ import "./HeroContent.css";
 import { Link } from "react-router-dom";
 import ReactScrollLink from "../../../components/ReactScrollLink.jsx";
 
-//TODO: get summary content from db
-//TODO: cta text
-const HeroContent = ({ intro, summary }) => {
+const HeroContent = ({ intro, hero }) => {
   return (
     <div className="heroContent">
       <div className="introContainer">
@@ -13,29 +11,15 @@ const HeroContent = ({ intro, summary }) => {
       </div>
       <div className="summary">
         <p>
-          I’m a software developer specializing in creating responsive,
-          user-friendly, accessible applications. I have a solid background in
-          responsive web design (HTML, CSS, JavaScript), Visual Basic for
-          Applications (VBA), and PowerShell. I created this site to showcase my
-          personal, academic, and professional projects. Please feel free to
-          check out my{" "}
+          {hero.lead} Please feel free to check out my{" "}
           <ReactScrollLink to="portfolio" className="heroLink">
             portfolio
           </ReactScrollLink>
           .
         </p>
+        <p>{hero.why}</p>
         <p>
-          Why Simple Not Simpler? Some solutions are too complicated which
-          result in unnecessary expense. Some solutions are too simple and don't
-          achieve the goal. I try to balance these extremes by keeping in mind
-          this bit of wisdom I found (often attributed to Einsten): "Everything
-          Should Be Made as Simple as Possible, But Not Simpler".
-        </p>
-        <p>
-          My coding skills are supplemented with advanced Excel skills and over
-          17 years of experience providing exceptional technical support and
-          customer service, including 7 years of experience providing deskside
-          and system admin support. Please feel free to browse my{" "}
+          {hero.extra} Please feel free to browse my{" "}
           <ReactScrollLink to="skills" className="heroLink">
             skills
           </ReactScrollLink>{" "}
@@ -53,8 +37,7 @@ const HeroContent = ({ intro, summary }) => {
         <div className="cta">
           <h2 className="ctaHeader">Let's Connect!!!</h2>
           <p className="ctaText">
-            Want to discuss a website or Office application project? Please feel
-            free to email me at{" "}
+            {hero.ctaIntro} Please feel free to email me at{" "}
             <Link to="mailto:contact@simplenotsimpler.com" className="heroLink">
               contact@simplenotsimpler.com
             </Link>{" "}

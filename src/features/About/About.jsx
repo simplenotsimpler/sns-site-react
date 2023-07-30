@@ -18,7 +18,7 @@ const About = () => {
   }
   return (
     <div className="aboutContent">
-      <HeroContent intro={basics.intro} summary={basics.summary} />
+      <HeroContent intro={basics.intro} hero={basics.hero} />
 
       <div className="spotlight">
         <div className="einsteinImgHolder">
