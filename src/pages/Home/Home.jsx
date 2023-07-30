@@ -1,7 +1,6 @@
 //data stuff
 import { useBasics } from "../../hooks/useBasics.js";
 
-import ScrollToHashElement from "../../components/layout/ScrollToHashElement.js";
 import NavHeader from "../../components/layout/NavHeader/NavHeader.jsx";
 
 import About from "../../features/About/About.jsx";
@@ -28,7 +27,7 @@ const Home = () => {
 
   return (
     <>
-      <ScrollToHashElement />
+      
       <SEO
         title={`${basics.siteName} | Portfolio`}
         description={basics.summary}

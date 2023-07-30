@@ -43,9 +43,15 @@
   margin-left: auto;
 }
 
-.active {
+.navItem:hover {
   color: var(--color-primary);
+  cursor: pointer;
 }
+
+.navItem > .active {
+  border-bottom: 2px solid var(--color-primary);
+}
+
 .navMenuLink {
   text-decoration: none;
   color: inherit;

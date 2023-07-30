@@ -1,29 +1,21 @@
-import { Link } from "react-router-dom";
-import { useLocation } from "react-router-dom";
+import { Link, animateScroll as scroll } from "react-scroll";
+
 import { useState } from "react";
 
 import "./NavHeader.css";
 
-/* 
-  Issue: NavHashLink does not apply active styling anymore and this issue returned https://github.com/rafgraph/react-router-hash-link/issues/29. 
-  I think had similar issues w/ React Router Dom NavLink so I have kept this solution even with the switch to ScrollToHashElement.
-  
-  SOLUTION: combined the following to detect active link w/ hash:
-  https://github.com/WebDevSimplified/react-navbar/blob/main/src/Navbar.js
-  https://github.com/WebDevSimplified/react-navbar/blob/main/src/styles.css
-  make sure anchor class after li class since inheriting color from above
-  https://medium.com/how-to-react/add-an-active-classname-to-the-link-using-react-router-b7c350473916
-  --> except used location.hash
-
-  Note: switched 
-*/
-
+// https://www.digitalocean.com/community/tutorials/how-to-implement-smooth-scrolling-in-react
 function CustomLink({ to, children, ...props }) {
-  const location = useLocation();
-
   return (
-    <li className={location.hash === to ? "active" : ""}>
-      <Link to={to} {...props}>
+    <li className="navItem">
+      <Link
+        activeClass="active"
+        to={to}
+        spy={true}
+        smooth={true}
+        offset={-144}
+        duration={500}
+      >
         {children}
       </Link>
     </li>
@@ -49,28 +41,28 @@ const NavHeader = () => {
           onClick={handleNavToggle}
         >
           <CustomLink
-            to="#about"
+            to="about"
             className="navMenuLink"
             onClick={handleNavToggle}
           >
             About
           </CustomLink>
           <CustomLink
-            to="#portfolio"
+            to="portfolio"
             className="navMenuLink"
             onClick={handleNavToggle}
           >
             Portfolio
           </CustomLink>
           <CustomLink
-            to="#skills"
+            to="skills"
             className="navMenuLink"
             onClick={handleNavToggle}
           >
             Skills
           </CustomLink>
           <CustomLink
-            to="#contact"
+            to="contact"
             className="navMenuLink"
             onClick={handleNavToggle}
           >
