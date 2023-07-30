@@ -1,4 +1,5 @@
 import { Link, animateScroll as scroll } from "react-scroll";
+import ReactScrollLink from "../../ReactScrollLink.jsx";
 
 import { useState } from "react";
 
@@ -8,16 +9,9 @@ import "./NavHeader.css";
 function CustomLink({ to, children, ...props }) {
   return (
     <li className="navItem">
-      <Link
-        activeClass="active"
-        to={to}
-        spy={true}
-        smooth={true}
-        offset={-144}
-        duration={500}
-      >
+      <ReactScrollLink activeClass="active" to={to}>
         {children}
-      </Link>
+      </ReactScrollLink>
     </li>
   );
 }

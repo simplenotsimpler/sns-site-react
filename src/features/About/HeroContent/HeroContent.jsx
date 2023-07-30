@@ -2,7 +2,6 @@ import { LinkButton } from "../../../components/Button/Button.jsx";
 import "./HeroContent.css";
 import { Link } from "react-router-dom";
 
-//TODO: fix links via hash not working
 //TODO: get summary content from db
 //TODO: cta text
 const HeroContent = ({ intro, summary }) => {
