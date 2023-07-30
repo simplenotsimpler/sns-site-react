@@ -26,6 +26,10 @@
   text-decoration: none;
 }
 
+.brandName:hover {
+  cursor: pointer;
+}
+
 .navBar {
   display: flex;
   justify-content: space-between;

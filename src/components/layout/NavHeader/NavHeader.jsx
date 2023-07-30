@@ -5,7 +5,6 @@ import { useState } from "react";
 
 import "./NavHeader.css";
 
-// https://www.digitalocean.com/community/tutorials/how-to-implement-smooth-scrolling-in-react
 function CustomLink({ to, children, ...props }) {
   return (
     <li className="navItem">
@@ -16,7 +15,6 @@ function CustomLink({ to, children, ...props }) {
   );
 }
 
-//TODO: fix Simple Not Simpler link
 const NavHeader = () => {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
 
@@ -27,9 +25,9 @@ const NavHeader = () => {
   return (
     <div className="navHeader">
       <nav className="navBar">
-        <Link to="#top" className="brandName">
+        <ReactScrollLink to="about" className="brandName">
           Simple Not Simpler
-        </Link>
+        </ReactScrollLink>
 
         <ul
           className={`navMenu ${isNavExpanded ? "expanded" : ""}`}
