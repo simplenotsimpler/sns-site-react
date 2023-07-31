@@ -1,5 +1,6 @@
 import { Link, animateScroll as scroll } from "react-scroll";
 import ReactScrollLink from "../../ReactScrollLink.jsx";
+import logo from "../../../assets/images/sns-logo-inverse.png";
 
 import { useState } from "react";
 
@@ -34,7 +35,10 @@ const NavHeader = () => {
     <div className="navHeader">
       <nav className="navBar">
         <ReactScrollLink to="about" className="brandName">
-          Simple Not Simpler
+          <div className="branding">
+            <img src={logo} alt="" className="logoImage" />
+            Simple Not Simpler
+          </div>
         </ReactScrollLink>
 
         <ul

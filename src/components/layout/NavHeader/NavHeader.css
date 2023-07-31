@@ -18,7 +18,7 @@
 .brandName {
   font-style: normal;
   font-weight: 700;
-  font-size: 36px;
+  font-size: 2.25rem;
   line-height: 42px;
 
   /* color-primary */
@@ -30,6 +30,16 @@
   cursor: pointer;
 }
 
+.logoImage {
+  width: 60px;
+  height: 60px;
+  margin-right: 0.5rem;
+}
+
+.branding {
+  display: flex;
+  align-items: center;
+}
 .navBar {
   display: flex;
   justify-content: space-between;
@@ -112,5 +122,11 @@
 
   .hamburger.expanded .hamburgerBar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .brandName {
+    font-size: 1.75rem;
   }
 }
