@@ -1,4 +1,4 @@
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link } from "react-scroll";
 
 // https://www.digitalocean.com/community/tutorials/how-to-implement-smooth-scrolling-in-react
 

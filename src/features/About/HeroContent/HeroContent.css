@@ -4,7 +4,7 @@
   flex-direction: column;
 
   /* need this so intro goes no wider than actual text */
-  align-items: start;
+  align-items: flex-start;
 
   margin-left: 75px;
   width: 65%;

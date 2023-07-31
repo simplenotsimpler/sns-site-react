@@ -1,4 +1,5 @@
 import "./About.css";
+import einstein from "../../assets/images/einstein_stencil.png";
 
 import HeroContent from "./HeroContent/HeroContent.jsx";
 import Quote from "./Quote/Quote.jsx";
@@ -22,7 +23,7 @@ const About = () => {
 
       <div className="spotlight">
         <div className="einsteinImgHolder">
-          <img src="/images/einstein_stencil.png" alt="" />
+          <img src={einstein} alt="" />
         </div>
         <Quote quote={basics.quote} />
       </div>

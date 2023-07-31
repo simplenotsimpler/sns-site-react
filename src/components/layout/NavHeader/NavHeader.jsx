@@ -1,4 +1,3 @@
-import { Link, animateScroll as scroll } from "react-scroll";
 import ReactScrollLink from "../../ReactScrollLink.jsx";
 import logo from "../../../assets/images/sns-logo-inverse.png";
 

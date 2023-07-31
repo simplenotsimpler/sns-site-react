@@ -1,4 +1,3 @@
-import { LinkButton } from "../../../components/Button/Button.jsx";
 import "./HeroContent.css";
 import { Link } from "react-router-dom";
 import ReactScrollLink from "../../../components/ReactScrollLink.jsx";
@@ -49,9 +48,6 @@ const HeroContent = ({ intro, hero }) => {
           </p>
         </div>
       </div>
-
-      {/* <p className="summary">{summary}</p> */}
-      {/* <LinkButton to="#contact">Let's Connect</LinkButton> */}
     </div>
   );
 };
