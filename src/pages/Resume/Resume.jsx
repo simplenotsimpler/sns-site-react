@@ -1,3 +1,5 @@
+import Section from "../../components/layout/Section.jsx";
+
 import Education from "../../features/Education/Education.jsx";
 import Positions from "../../features/Positions/Positions.jsx";
 import Projects from "../../features/Projects/Projects.jsx";
@@ -12,33 +14,49 @@ import { useBasics } from "../../hooks/useBasics.js";
 //helper
 import SEO from "../../components/layout/SEO.jsx";
 
-//updated to h1 since these are h1 per section
-const Section = ({ children, sectionClass, heading }) => {
-  return (
-    <section className={`resumeSection ${sectionClass}`}>
-      <h1 className="resumeSectionHeading">{heading}</h1>
-      {children}
-    </section>
-  );
-};
+// //updated to h1 since these are h1 per section
+// const Section = ({ children, sectionClass, heading }) => {
+//   return (
+//     <section className={`resumeSection ${sectionClass}`}>
+//       <h1 className="resumeSectionHeading">{heading}</h1>
+//       {children}
+//     </section>
+//   );
+// };
 
 const ResumeMain = ({ basics }) => {
   return (
     <main className="resumeMain">
-      <Section sectionClass="resumeProfile" heading="Professional Profile">
+      <Section
+        forResume={true}
+        sectionClass="resumeProfile"
+        heading="Professional Profile"
+      >
         <ProfessionalProfile professionalProfile={basics.professionalProfile} />
       </Section>
-      <Section sectionClass="resumeSkills" heading="Skills">
+      <Section forResume={true} sectionClass="resumeSkills" heading="Skills">
         <Skills forResume={true} />
       </Section>
-      <Section sectionClass="resumeEducation" heading="Relevant Education">
+      <Section
+        forResume={true}
+        sectionClass="resumeEducation"
+        heading="Relevant Education"
+      >
         <Education />
       </Section>
-      <Section sectionClass="resumeWork" heading="Relevant Work">
+      <Section
+        forResume={true}
+        sectionClass="resumeWork"
+        heading="Relevant Work"
+      >
         <Positions />
       </Section>
 
-      <Section sectionClass="resumeProjects" heading="Projects">
+      <Section
+        forResume={true}
+        sectionClass="resumeProjects"
+        heading="Projects"
+      >
         <Projects forResume={true} />
       </Section>
     </main>
@@ -48,13 +66,21 @@ const ResumeMain = ({ basics }) => {
 const ResumeForITMain = () => {
   return (
     <main className="resumeMainIT">
-      <Section sectionClass="resumeWork" heading="Relevant Work">
+      <Section
+        forResume={true}
+        sectionClass="resumeWork"
+        heading="Relevant Work"
+      >
         <Positions forIT={true} />
       </Section>
-      <Section sectionClass="resumeEducation" heading="Relevant Education">
+      <Section
+        forResume={true}
+        sectionClass="resumeEducation"
+        heading="Relevant Education"
+      >
         <Education />
       </Section>
-      <Section sectionClass="resumeSkills" heading="Skills">
+      <Section forResume={true} sectionClass="resumeSkills" heading="Skills">
         <Skills forResume={true} />
       </Section>
     </main>

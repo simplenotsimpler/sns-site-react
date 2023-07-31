@@ -1,15 +1,18 @@
 //data stuff
 import { useBasics } from "../../hooks/useBasics.js";
 
+//layout components
 import NavHeader from "../../components/layout/NavHeader/NavHeader.jsx";
+import Section from "../../components/layout/Section.jsx";
+import SEO from "../../components/layout/SEO.jsx";
 
+//content components
 import About from "../../features/About/About.jsx";
 import Projects from "../../features/Projects/Projects.jsx";
 import Skills from "../../features/Skills/Skills.jsx";
 import Contact from "../../features/Contact/Contact.jsx";
 
 import "./Home.css";
-import SEO from "../../components/layout/SEO.jsx";
 
 //TODO: phase 2: get a real spinner or use skeleton
 
@@ -38,22 +41,18 @@ const Home = () => {
       />
       <NavHeader />
       <main className="container">
-        <section id="about" className="homeSection">
-          <h1 className="sectionTitle">About</h1>
+        <Section id="about" className="homeSection" heading="About">
           <About />
-        </section>
-        <section id="portfolio" className="homeSection">
-          <h1 className="sectionTitle">Portfolio</h1>
+        </Section>
+        <Section id="portfolio" className="homeSection" heading="Portfolio">
           <Projects />
-        </section>
-        <section id="skills" className="homeSection">
-          <h1 className="sectionTitle">Skills</h1>
+        </Section>
+        <Section id="skills" className="homeSection" heading="Skills">
           <Skills />
-        </section>
-        <section id="contact" className="homeSection">
-          <h1 className="sectionTitle">Contact</h1>
+        </Section>
+        <Section id="contact" className="homeSection" heading="Contact">
           <Contact />
-        </section>
+        </Section>
       </main>
     </>
   );
