@@ -12,10 +12,11 @@ import { useBasics } from "../../hooks/useBasics.js";
 //helper
 import SEO from "../../components/layout/SEO.jsx";
 
+//updated to h1 since these are h1 per section
 const Section = ({ children, sectionClass, heading }) => {
   return (
     <section className={`resumeSection ${sectionClass}`}>
-      <h2 className="resumeSectionHeading">{heading}</h2>
+      <h1 className="resumeSectionHeading">{heading}</h1>
       {children}
     </section>
   );

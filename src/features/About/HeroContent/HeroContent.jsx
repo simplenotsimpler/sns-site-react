@@ -2,11 +2,12 @@ import "./HeroContent.css";
 import { Link } from "react-router-dom";
 import ReactScrollLink from "../../../components/ReactScrollLink.jsx";
 
+//updated intro to h2 since WAVE Evaluation suggested it may be a heading
 const HeroContent = ({ intro, hero }) => {
   return (
     <div className="heroContent">
       <div className="introContainer">
-        <p className="intro">{intro}</p>
+        <h2 className="intro">{intro}</h2>
       </div>
       <div className="summary">
         <p>

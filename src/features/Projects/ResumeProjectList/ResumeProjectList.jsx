@@ -7,7 +7,7 @@ const ResumeProject = ({ project }) => {
     <li>
       <article className="resumeProjectItem">
         <header className="resumeProjectHeader">
-          <h3 className="resumeProjectTitle">{project.name}</h3>
+          <h1 className="resumeProjectTitle">{project.name}</h1>
           <p className="resumeProjectDate">
             {formatWorkDate(project.createdAt)} -{" "}
             {formatWorkDate(project.pushedAt)}

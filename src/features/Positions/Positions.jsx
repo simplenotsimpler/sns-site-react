@@ -15,7 +15,7 @@ const Highlight = ({ highlight }) => {
 const PositionSkillsUsed = ({ skills }) => {
   return (
     <section className="resumeSkillsUsed">
-      <h3 className="resumeSkillsUsedTitle">Skills Used:</h3>
+      <h1 className="resumeSkillsUsedTitle">Skills Used:</h1>
       <ul className="resumeSkillsUsedList">
         {skills.map((skill, index) => (
           <li key={index}>{skill}</li>
@@ -29,11 +29,11 @@ const Position = ({ position }) => {
     <li>
       <article className="positionItem">
         <header className="positionHeader">
-          <p className="positionInfo">
+          <h1 className="positionInfo">
             <span className="positionTitle">{position.position}</span>,{" "}
             <span className="positionCompany">{position.company}</span> |{" "}
             <span className="positionLocation">{position.location}</span>
-          </p>
+          </h1>
 
           <p className="positionDate">
             {formatWorkDate(position.startDate)} -{" "}

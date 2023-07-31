@@ -7,7 +7,7 @@ const ResumeKeyword = ({ keyword }) => {
 const ResumeSkillListItem = ({ skill }) => {
   return (
     <li>
-      <h3 className="resumeSkillTitle">{skill.name}:</h3>
+      <h2 className="resumeSkillTitle">{skill.name}:</h2>
       <ul className="resumeKeywords">
         {skill.keywords.map((keyword, index) => (
           <ResumeKeyword keyword={keyword} key={index} />
