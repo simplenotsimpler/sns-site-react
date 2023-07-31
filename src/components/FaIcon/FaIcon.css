@@ -1,9 +1,14 @@
-/* TODO: adjust icon smaller on mobile */
-
 .iconWithBackground {
   width: 60px;
   height: 60px;
-  color: white;
+  color: var(--color-light);
   background-color: var(--color-primary);
   padding: 3px;
+}
+
+@media only screen and (max-width: 450px) {
+  .iconWithBackground {
+    width: 45px;
+    height: 45px;
+  }
 }
