@@ -20,9 +20,7 @@ const EducationItem = ({ education }) => {
             </span>{" "}
             | {education.location}
           </p>
-          <p className="resumeDegreeDate">
-            {formatYear(education.startDate)} - {formatYear(education.endDate)}
-          </p>
+          <p className="resumeDegreeDate">{formatYear(education.endDate)}</p>
         </header>
       </article>
     </li>
