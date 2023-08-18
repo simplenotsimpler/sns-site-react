@@ -18,8 +18,8 @@ const Contact = () => {
   return (
     <div className="contactContainer">
       <section className="contactContent">
-        <h1 className="contactTitle">Let’s Connect !!!</h1>
-        <p className="contactCTA">{basics.contactCTA}</p>
+        {/* <h1 className="contactTitle">Let’s Connect !!!</h1> */}
+        {/* <p className="contactCTA">{basics.contactCTA}</p> */}
         <ContactInfo email={basics.email} profiles={basics.profiles} />
       </section>
 
