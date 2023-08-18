@@ -21,11 +21,7 @@ const HeroContent = ({ intro, hero }) => {
           <ReactScrollLink to="portfolio" className="heroLink" tabIndex={0}>
             portfolio
           </ReactScrollLink>
-          .
-        </p>
-        <p>{hero.why}</p>
-        <p>
-          {hero.extra} Please feel free to browse my{" "}
+          ,{" "}
           <ReactScrollLink to="skills" className="heroLink" tabIndex={0}>
             skills
           </ReactScrollLink>{" "}
@@ -41,6 +37,7 @@ const HeroContent = ({ intro, hero }) => {
           </Link>
           .
         </p>
+
         <div className="cta">
           <h2 className="ctaHeader">Let's Connect!!!</h2>
           <p className="ctaText">
