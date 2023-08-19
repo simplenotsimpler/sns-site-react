@@ -37,13 +37,7 @@ const ResumeMain = ({ basics }) => {
       <Section forResume={true} sectionClass="resumeSkills" heading="Skills">
         <Skills forResume={true} />
       </Section>
-      <Section
-        forResume={true}
-        sectionClass="resumeEducation"
-        heading="Relevant Education"
-      >
-        <Education />
-      </Section>
+
       <Section
         forResume={true}
         sectionClass="resumeWork"
@@ -51,7 +45,13 @@ const ResumeMain = ({ basics }) => {
       >
         <Positions />
       </Section>
-
+      <Section
+        forResume={true}
+        sectionClass="resumeEducation"
+        heading="Relevant Education"
+      >
+        <Education />
+      </Section>
       <Section
         forResume={true}
         sectionClass="resumeProjects"

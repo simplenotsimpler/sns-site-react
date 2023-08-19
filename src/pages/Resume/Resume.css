@@ -60,8 +60,8 @@ section {
   grid-template-areas:
     "profile-area profile-area profile-area"
     "skills-area skills-area skills-area"
-    "education-area education-area education-area"
     "work-area work-area work-area"
+    "education-area education-area education-area"
     "projects-area projects-area projects-area";
 
   /* set row and col gaps separately */
@@ -101,6 +101,11 @@ section {
 
 .resumeProfile {
   grid-area: profile-area;
+}
+
+.resumeEducation {
+  break-inside: avoid-page;
+  /* break-after: page; */
 }
 .resumeProjects {
   grid-area: projects-area;
