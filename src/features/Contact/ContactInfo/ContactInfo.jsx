@@ -42,13 +42,13 @@ const ContactInfo = ({ email, profiles }) => {
       })}
 
       <ContactItem
-        to="/resume"
-        icon="File"
+        to="/Rebecca-Hensley-Resume.docx"
+        icon="FileDownload"
         className="contactLink"
         target="_blank"
-        rel="noreferrer noopener"
+        download
       >
-        /resume
+        download resume (.docx)
       </ContactItem>
     </div>
   );

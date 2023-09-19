@@ -25,15 +25,15 @@ const HeroContent = ({ intro, hero }) => {
           <ReactScrollLink to="skills" className="heroLink" tabIndex={0}>
             skills
           </ReactScrollLink>{" "}
-          and{" "}
+          or{" "}
           <Link
-            to="https://simplenotsimpler.com/resume"
+            to="/Rebecca-Hensley-Resume.docx"
             target="_blank"
-            rel="noreferrer noopener"
+            download
             className="heroLink"
             tabIndex={0}
           >
-            resume
+            download my resume (.docx)
           </Link>
           .
         </p>

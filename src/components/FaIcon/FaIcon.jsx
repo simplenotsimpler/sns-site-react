@@ -17,6 +17,8 @@ import {
   faScrewdriverWrench,
   faServer,
   faComputer,
+  faFileWord,
+  faFileArrowDown,
 } from "@fortawesome/free-solid-svg-icons";
 
 //probably can combine this into one component w/ SkillIcon
@@ -51,6 +53,10 @@ const FaIcon = ({ icon, ...props }) => {
       return <FontAwesomeIcon icon={faServer} {...props} />;
     case "Computer":
       return <FontAwesomeIcon icon={faComputer} {...props} />;
+    case "Word":
+      return <FontAwesomeIcon icon={faFileWord} {...props} />;
+    case "FileDownload":
+      return <FontAwesomeIcon icon={faFileArrowDown} {...props} />;
 
     default:
       break;
