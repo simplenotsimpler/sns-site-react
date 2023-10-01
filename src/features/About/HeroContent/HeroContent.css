@@ -61,6 +61,7 @@
   font-size: 1.25rem;
   line-height: 121%;
   margin-left: 50px;
+  max-width: 100%;
 }
 
 .summary > p {
@@ -96,5 +97,9 @@
   .summary {
     margin: 0;
     font-size: 1.25rem;
+  }
+
+  .cta {
+    margin-left: 0;
   }
 }
