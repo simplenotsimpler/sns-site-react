@@ -1,4 +1,4 @@
-import { parseISO } from "date-fns";
+import { format, parseISO } from "date-fns";
 
 //this is useful if you need the website w/o www
 export const cleanUri = (stringUri) => {
@@ -22,7 +22,7 @@ export function formatYear(stringDate) {
   return new Date(stringDate).getFullYear();
 }
 
-export function formatWorkDate(stringDate) {
+export function formatWorkDate(stringDate, includeDay = false) {
   //try convert to date object
   // const workDate = new Date(stringDate);
   //add midnight to force to UTC always so don't have off by one day bug
@@ -39,10 +39,12 @@ export function formatWorkDate(stringDate) {
     return stringDate;
   }
 
-  return workDate.toLocaleDateString("default", {
-    month: "short",
-    year: "numeric",
-  });
+  //add format with day so can use in info sheets
+  if (includeDay == true) {
+    return format(workDate, "yyyy-MM-dd");
+  }
+
+  return format(workDate, "MMM yyyy");
 }
 
 //use find to get single object instead of array
