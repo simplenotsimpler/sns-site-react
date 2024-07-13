@@ -1,8 +1,11 @@
+/* 
+    stretch so all columns start at top 
+    https://teamtreehouse.com/community/flexbox-make-all-flexitems-the-same-heights
+  */
 .skillCards {
   display: flex;
-  /* justify-content: space-between; */
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
   flex-wrap: wrap;
   gap: 1.5rem;
 }
@@ -17,7 +20,6 @@
   font-weight: 700;
   font-size: 30px;
   line-height: 113%;
-  /* text-align: center; */
   color: var(--color-primary);
   margin: 1.25rem 0;
 }
