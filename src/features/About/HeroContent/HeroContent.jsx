@@ -27,7 +27,7 @@ const HeroContent = ({ intro, hero }) => {
           </ReactScrollLink>{" "}
           or{" "}
           <Link
-            to="/Rebecca-Hensley-Resume.docx"
+            to="/Rebecca-Hensley-Resume-public.docx"
             target="_blank"
             download
             className="heroLink"

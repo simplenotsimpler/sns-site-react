@@ -42,7 +42,7 @@ const ContactInfo = ({ email, profiles }) => {
       })}
 
       <ContactItem
-        to="/Rebecca-Hensley-Resume.docx"
+        to="/Rebecca-Hensley-Resume-public.docx"
         icon="FileDownload"
         className="contactLink"
         target="_blank"
