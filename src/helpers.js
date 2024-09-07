@@ -40,7 +40,7 @@ export function formatWorkDate(stringDate, includeDay = false) {
   }
 
   //add format with day so can use in info sheets
-  if (includeDay == true) {
+  if (includeDay === true) {
     return format(workDate, "yyyy-MM-dd");
   }
 
