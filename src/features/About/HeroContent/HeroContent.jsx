@@ -21,20 +21,10 @@ const HeroContent = ({ intro, hero }) => {
           <ReactScrollLink to="portfolio" className="heroLink" tabIndex={0}>
             portfolio
           </ReactScrollLink>
-          ,{" "}
+          {" "}or{" "}
           <ReactScrollLink to="skills" className="heroLink" tabIndex={0}>
             skills
-          </ReactScrollLink>{" "}
-          or{" "}
-          <Link
-            to="/Rebecca-Hensley-Resume-public.docx"
-            target="_blank"
-            download
-            className="heroLink"
-            tabIndex={0}
-          >
-            download my resume (.docx)
-          </Link>
+          </ReactScrollLink>
           .
         </p>
 
