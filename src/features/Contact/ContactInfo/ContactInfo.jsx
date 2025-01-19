@@ -40,16 +40,6 @@ const ContactInfo = ({ email, profiles }) => {
           </ContactItem>
         );
       })}
-
-      <ContactItem
-        to="/Rebecca-Hensley-Resume-public.docx"
-        icon="FileDownload"
-        className="contactLink"
-        target="_blank"
-        download
-      >
-        download resume (.docx)
-      </ContactItem>
     </div>
   );
 };

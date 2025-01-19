@@ -2,7 +2,16 @@
   width: 100%;
   display: grid;
   grid-template-columns: 0.5fr 0.5fr;
+  grid-template-rows: 0.5fr 0.5fr;
   gap: 1.75rem;
+}
+
+/* https://stackoverflow.com/questions/44401674/how-to-create-a-css-grid-layout-box-that-spans-2-columns-and-2-rows */
+.contactLink:first-child {
+  grid-column: 1 / span 2;
+
+  /* grid align stuff not work */
+  margin: 0 auto;
 }
 
 .contactLink {
